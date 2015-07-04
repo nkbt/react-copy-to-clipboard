@@ -25,12 +25,16 @@ Developing and publishing multiple React components requires a lot of work to ke
 ## Usage
 
 1. Add as remote
+
   ```sh
   git add remote template git@github.com:nkbt/react-component-template.git
   ```
+
 2. Merge to existing repo
+
   ```sh
   git merge --no-ff template/master
   ```
+
 3. Fix conflicts
 4. If update needed, repeat
