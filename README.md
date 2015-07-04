@@ -11,7 +11,41 @@ Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
 
 > Would try to use execCommand with fallback to IE specific clipboardData interface and finally, fallback to simple prompt with proper text content & 'Copy to clipboard: Ctrl+C, Enter'
 
-## Example
+
+## Options
+
+
+#### `text`: React.PropTypes.string.isRequired
+
+Text to be copied to clipboard
+
+
+#### `onCopy`: React.PropTypes.func
+
+Optional callback, will be called when text is copied
+
+
+#### `children`: React.PropTypes.node.isRequired
+
+CopyToClipboard is a simple wrapping component, id does not render any tags, so it requires one child element to be present, which will be used to capture clicks.
+
+```js
+<CopyToClipboard text="Hello!">
+  <button>Copy to clipboard</button>
+</CopyToClipboard>
+```
+
+
+#### `dataHandler`: PropTypes.string
+
+Custom data attribute name for click-swap handler.
+Defaults to `swapHandler` which is `data-swap-handler`
+
+
+
+
+
+## Usage
 
 ```js
 import React from 'react';
