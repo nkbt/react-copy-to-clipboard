@@ -12,6 +12,9 @@ Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
 > Would try to use execCommand with fallback to IE specific clipboardData interface and finally, fallback to simple prompt with proper text content & 'Copy to clipboard: Ctrl+C, Enter'
 
 
+![Copy to clipboard](src/example/copy-to-clipboard.gif)
+
+
 ## Options
 
 
