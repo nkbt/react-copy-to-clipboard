@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: v0.10.38
+
+test:
+  override:
+    - npm run lint
+    - COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage,junit
+    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
