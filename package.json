@@ -1,0 +1,67 @@
+{
+  "name": "react-copy-to-clipboard",
+  "version": "0.0.0",
+  "description": "Copy-to-clipboard React component",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run build:clean && npm run build:lib && npm run build:example",
+    "build:clean": "rm -rf lib example",
+    "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
+    "build:example": "webpack",
+    "prepublish": "npm run build",
+    "start": "NODE_ENV=development webpack-dev-server --history-api-fallback",
+    "lint": "eslint *.js src test",
+    "karma": "karma start ./karma.conf.js",
+    "test": "npm run karma --  --single-run --reporters nyan",
+    "test:dev": "npm run karma -- --no-single-run --auto-watch --reporters nyan",
+    "test:cov": "COVERAGE=1 npm run karma -- --single-run --reporters coverage",
+    "check": "npm run lint && npm run test && npm run build",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkbt/react-copy-to-clipboard.git"
+  },
+  "keywords": [
+    "component",
+    "react-component",
+    "react",
+    "copy to clipboard",
+    "clipboard"
+  ],
+  "author": "Nik Butenko <nik@butenko.me> (http://butenko.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkbt/react-copy-to-clipboard/issues"
+  },
+  "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
+  "dependencies": {
+    "copy-to-clipboard": "^1.0.2",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.3.0",
+    "coveralls": "^2.11.2",
+    "eslint": "^0.24.0",
+    "eslint-loader": "^0.14.1",
+    "eslint-plugin-react": "^2.6.4",
+    "html-webpack-plugin": "^1.5.2",
+    "inject-loader": "^2.0.0",
+    "isparta-loader": "^0.2.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-coverage": "^0.4.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-nyan-reporter": "0.1.0",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-webpack": "^1.5.1",
+    "node-libs-browser": "^0.5.2",
+    "phantomjs": "^1.9.17",
+    "react-hot-loader": "^1.2.7",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
