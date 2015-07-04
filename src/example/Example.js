@@ -18,7 +18,7 @@ const App = React.createClass({
 
         <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
-          <button>Copy to clibpoard</button>
+          <button>Copy to clipboard</button>
         </CopyToClipboard>&nbsp;
 
 
