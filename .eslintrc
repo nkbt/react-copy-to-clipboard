@@ -5,6 +5,7 @@
     "es6": false
   },
   "rules": {
+    "strict": 0,
     "no-var": 0,
     "no-console": 0,
     "no-process-env": 0

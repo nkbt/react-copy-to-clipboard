@@ -9,7 +9,7 @@ describe('Component', () => {
 
 
   beforeEach(() => Component = ComponentInjector({
-    mock: mock
+    mock
   }));
 
 
