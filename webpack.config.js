@@ -2,12 +2,11 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 var env = process.env.NODE_ENV || 'production';
-var entry = process.env.ENTRY || 'Example';
 
 
 const production = {
   devtool: 'source-map',
-  entry: ['./src/example/' + entry + '.js'],
+  entry: './src/example/Example.js',
   output: {filename: 'bundle.js', path: path.resolve('example')},
   plugins: [
     new HtmlWebpackPlugin(),
@@ -32,11 +31,11 @@ const development = {
   devtool: 'eval',
 
   entry: [
-    './src/example/' + entry + '.js',
+    './src/example/Example.js',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server'
   ],
-  output: {filename: 'bundle.js', path: path.resolve('./example')},
+  output: {filename: 'bundle.js', path: path.resolve('example')},
   plugins: [
     new HtmlWebpackPlugin(),
     new webpack.DefinePlugin({
