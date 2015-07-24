@@ -33,7 +33,7 @@
     "url": "https://github.com/nkbt/react-component-template/issues"
   },
   "homepage": "https://github.com/nkbt/react-component-template",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^0.13.3"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "inject-loader": "^2.0.0",
     "isparta-loader": "^0.2.0",
     "jasmine-core": "^2.3.4",
-    "karma": "^0.13.3",
+    "karma": "^0.12.37",
     "karma-coverage": "^0.4.2",
     "karma-jasmine": "^0.3.6",
     "karma-junit-reporter": "^0.3.3",
