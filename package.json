@@ -35,9 +35,11 @@
     "url": "https://github.com/nkbt/react-copy-to-clipboard/issues"
   },
   "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
-  "dependencies": {
-    "copy-to-clipboard": "^1.0.2",
+  "peerDependencies": {
     "react": "^0.13.3"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "^1.0.2"
   },
   "devDependencies": {
     "babel": "^5.8.3",
@@ -51,7 +53,7 @@
     "inject-loader": "^2.0.0",
     "isparta-loader": "^0.2.0",
     "jasmine-core": "^2.3.4",
-    "karma": "^0.13.3",
+    "karma": "^0.12.37",
     "karma-coverage": "^0.4.2",
     "karma-jasmine": "^0.3.6",
     "karma-junit-reporter": "^0.3.3",
