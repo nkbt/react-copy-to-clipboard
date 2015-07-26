@@ -28,7 +28,7 @@ var webpackConfig = {
   }
 };
 
-const coverageDir = path.resolve(
+var coverageDir = path.resolve(
   path.join(process.env.CIRCLE_ARTIFACTS || 'reports', 'coverage')
 );
 
