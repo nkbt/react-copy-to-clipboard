@@ -7,4 +7,4 @@ test:
     - $(npm bin)/eslint . --format tap | $(npm bin)/tap-xunit > $CIRCLE_TEST_REPORTS/lint.xml
     - COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage,junit
   post:
-    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || true
