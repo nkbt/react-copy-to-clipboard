@@ -55,9 +55,12 @@
     "karma-nyan-reporter": "0.2.1",
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-webpack": "^1.6.0",
+    "mkdirp": "^0.5.1",
     "node-libs-browser": "^0.5.2",
     "phantomjs": "^1.9.17",
     "react-hot-loader": "^1.2.8",
+    "rimraf": "^2.4.2",
+    "tap-xunit": "^1.1.1",
     "webpack": "^1.10.5",
     "webpack-dev-server": "^1.10.1"
   }
