@@ -1,27 +1,27 @@
 {
   "name": "react-copy-to-clipboard",
-  "version": "1.0.1",
-  "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
+  "version": "1.0.2",
+  "description": "Copy-to-clipboard React component",
+  "main": "react-copy-to-clipboard.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bower-registry/react-copy-to-clipboard.git"
+  },
+  "keywords": [
+    "component",
+    "react-component",
+    "react",
+    "copy to clipboard",
+    "clipboard"
+  ],
   "authors": [
     "Nik Butenko <nik@butenko.me> (http://butenko.me/)"
   ],
-  "description": "Copy-to-clipboard React component",
-  "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/nkbt/react-copy-to-clipboard.git"
-  },
+  "license": "MIT",
+  "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
   "dependencies": {
-    "copy-to-clipboard": "^1.0.2",
     "react": "^0.13.3"
   },
-  "keywords": [
-    "react",
-    "react-component",
-    "component",
-    "clipboard"
-  ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",

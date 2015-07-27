@@ -15,38 +15,19 @@ Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
 ![Copy to clipboard](src/example/copy-to-clipboard.gif)
 
 
-## Options
+## Installation
 
+### npm
 
-#### `text`: React.PropTypes.string.isRequired
-
-Text to be copied to clipboard
-
-
-#### `onCopy`: React.PropTypes.func
-
-Optional callback, will be called when text is copied
-
-
-#### `children`: React.PropTypes.node.isRequired
-
-CopyToClipboard is a simple wrapping component, id does not render any tags, so it requires one child element to be present, which will be used to capture clicks.
-
-```js
-<CopyToClipboard text="Hello!">
-  <button>Copy to clipboard</button>
-</CopyToClipboard>
+```sh
+npm install --save react-copy-to-clipboard
 ```
 
+### bower
 
-#### `dataHandler`: PropTypes.string
-
-Custom data attribute name for click-swap handler.
-Defaults to `swapHandler` which is `data-swap-handler`
-
-
-
-
+```sh
+bower install --save react-copy-to-clipboard
+```
 
 ## Usage
 
@@ -87,6 +68,30 @@ const App = React.createClass({
 React.render(<App />, document.body);
 ```
 
+## Options
+
+
+#### `text`: React.PropTypes.string.isRequired
+
+Text to be copied to clipboard
+
+
+#### `onCopy`: React.PropTypes.func
+
+Optional callback, will be called when text is copied
+
+
+#### `children`: React.PropTypes.node.isRequired
+
+CopyToClipboard is a simple wrapping component, id does not render any tags, so it requires one child element to be present, which will be used to capture clicks.
+
+```js
+<CopyToClipboard text="Hello!">
+  <button>Copy to clipboard</button>
+</CopyToClipboard>
+```
+
+
 ## Development and testing
 
 To run comprehensive example covering all `InFlux` features, use `npm start`, which will compile `src/example/Example.js`
@@ -105,6 +110,11 @@ open http://localhost:8080
 ## Demo
 
 [http://nkbt.github.io/react-copy-to-clipboard/example](http://nkbt.github.io/react-copy-to-clipboard/example)
+
+
+## Codepen demo
+
+[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv)
 
 
 ## Tests
