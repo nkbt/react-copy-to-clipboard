@@ -1,6 +1,6 @@
 {
   "name": "react-copy-to-clipboard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Copy-to-clipboard React component",
   "main": "lib/index.js",
   "scripts": {
