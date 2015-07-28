@@ -4,10 +4,11 @@
   "description": "React component",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run build:clean && npm run build:lib && npm run build:example",
-    "build:clean": "rm -rf lib example",
+    "build": "npm run build:clean && npm run build:lib && npm run build:example && npm run build:build",
+    "build:clean": "rm -rf lib example build",
     "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
     "build:example": "webpack",
+    "build:build": "BUILD=1 webpack",
     "prepublish": "npm run build",
     "start": "NODE_ENV=development webpack-dev-server --history-api-fallback",
     "lint": "eslint *.js src test",

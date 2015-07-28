@@ -4,7 +4,7 @@ var path = require('path');
 var env = process.env.NODE_ENV || 'production';
 
 
-const production = {
+var production = {
   devtool: 'source-map',
   entry: './src/example/Example.js',
   output: {filename: 'bundle.js', path: path.resolve('example')},
@@ -27,7 +27,7 @@ const production = {
 };
 
 
-const development = {
+var development = {
   devtool: 'eval',
 
   entry: [
@@ -68,4 +68,43 @@ const development = {
 };
 
 
-module.exports = env === 'production' ? production : development;
+var build = {
+  devtool: 'source-map',
+  entry: './src/index.js',
+  output: {
+    filename: require('./package.json').name + '.js',
+    path: path.resolve('build'),
+    library: 'Component',
+    libraryTarget: 'umd'
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"' + env + '"'
+      }
+    })
+  ],
+  module: {
+    loaders: [
+      {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
+    ]
+  },
+  resolve: {extensions: ['', '.js']},
+  stats: {colors: true},
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
+  }
+};
+
+if (process.env.BUILD) {
+  module.exports = build;
+} else if (env === 'production') {
+  module.exports = production;
+} else {
+  module.exports = development;
+}
