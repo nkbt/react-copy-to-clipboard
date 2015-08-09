@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/nkbt/react-component-template",
   "peerDependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13 || ~0.14.0-beta"
   },
   "devDependencies": {
     "babel": "^5.8.21",
