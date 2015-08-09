@@ -83,7 +83,7 @@ Optional callback, will be called when text is copied
 
 #### `children`: React.PropTypes.node.isRequired
 
-CopyToClipboard is a simple wrapping component, id does not render any tags, so it requires one child element to be present, which will be used to capture clicks.
+CopyToClipboard is a simple wrapping component, it does not render any tags, so it requires one child element to be present, which will be used to capture clicks.
 
 ```js
 <CopyToClipboard text="Hello!">
