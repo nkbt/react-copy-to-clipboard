@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
   "peerDependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13 || ~0.14.0-beta"
   },
   "dependencies": {
     "copy-to-clipboard": "^1.0.2"
