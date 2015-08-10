@@ -2,24 +2,26 @@ import React from 'react';
 import copy from 'copy-to-clipboard';
 
 
+const onClick = (text, onCopy) => () => {
+  copy(text);
+  if (onCopy) {
+    onCopy(text);
+  }
+};
+
+
 const CopyToClipboard = React.createClass({
   propTypes: {
     text: React.PropTypes.string.isRequired,
-    children: React.PropTypes.node.isRequired,
+    children: React.PropTypes.node,
     onCopy: React.PropTypes.func
   },
 
 
-  onClick() {
-    copy(this.props.text);
-    if (this.props.onCopy) {
-      this.props.onCopy(this.props.text);
-    }
-  },
-
-
   render() {
-    return React.cloneElement(React.Children.only(this.props.children), {onClick: this.onClick});
+    const {text, onCopy, ...props} = this.props;
+
+    return <button {...props} onClick={onClick(text, onCopy)} />;
   }
 });
 
