@@ -1,11 +1,15 @@
+build/
 coverage/
 example/
 src/
+reports/
 test/
 .coveralls.yml
+.eslintignore
 .eslintrc
 .gitignore
 .npmignore
+bower.json
 circle.yml
 karma.conf.js
 webpack.config.js
