@@ -169,7 +169,7 @@
     "eol-last": 2, // enforce newline at the end of file, with no multiple empty lines
     "func-names": 0, // require function expressions to have a name (off by default)
     "func-style": 0, // enforces use of function declarations or expressions (off by default)
-    "indent": [2, 2], // this option sets a specific tab width for your code (off by default)
+    "indent": [2, 2, {"SwitchCase": 1}], // this option sets a specific tab width for your code (off by default)
     "key-spacing": [2, {"beforeColon": false, "afterColon": true}], // enforces spacing between keys and values in object literal properties
 //     "lines-around-comment": [2, {"beforeBlockComment": true, "afterBlockComment": false, "beforeLineComment": true, "afterLineComment": false, "allowBlockStart": true, "allowBlockEnd": true}], //enforces empty lines around comments (off by default)
      "lines-around-comment": [2, {"beforeBlockComment": true, "afterBlockComment": false, "afterLineComment": false}], // allowBlockStart and allowBlockEnd are broken in 0.24, but fixed in master
