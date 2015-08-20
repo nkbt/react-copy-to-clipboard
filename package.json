@@ -15,8 +15,8 @@
     "test": "karma start ./karma.conf.js --single-run --reporters nyan",
     "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch --reporters nyan",
     "test:cov": "COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage",
-    "check": "npm run lint && npm run test && npm run build",
-    "coveralls": "cat ./reports/coverage/lcov.info | `npm bin`/coveralls"
+    "coveralls": "cat ./reports/coverage/lcov.info | `npm bin`/coveralls",
+    "validate": "npm run lint && npm run build && npm run test:cov"
   },
   "repository": {
     "type": "git",
