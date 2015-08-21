@@ -18,14 +18,15 @@ const App = React.createClass({
 
         <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
-          <button>Copy to clipboard</button>
+          <span>Copy to clipboard</span>
         </CopyToClipboard>&nbsp;
 
 
         {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
 
         <br />
-        <textarea style={{marginTop: '1em'}} cols="22" rows="3"></textarea>
+
+        <textarea style={{marginTop: '1em'}} cols="22" rows="3" />
 
       </div>
     );

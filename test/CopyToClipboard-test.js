@@ -31,8 +31,18 @@ describe('CopyToClipboard', () => {
   });
 
 
-  it('should require a single child to be present', () => {
-    expect(create).toThrow();
+  it('should not require children to be present', () => {
+    expect(create).not.toThrow();
+  });
+
+
+  it('should be ok with multiple children present', () => {
+    expect(() => TestUtils.renderIntoDocument((
+      <CopyToClipboard text="test" onCopy={onCopy}>
+        <span>one</span>
+        <span>two</span>
+      </CopyToClipboard>
+    ))).not.toThrow();
   });
 
 
@@ -68,5 +78,20 @@ describe('CopyToClipboard', () => {
       .renderIntoDocument(<CopyToClipboard text="ok"><span>test</span></CopyToClipboard>));
 
     expect(TestUtils.Simulate.click.bind(null, span)).not.toThrow();
+  });
+
+
+  it('should pass props to the rendered button', () => {
+    const button = TestUtils.renderIntoDocument((
+      <CopyToClipboard
+        text="hello" onCopy={onCopy}
+        className="testClass" style={{display: 'none'}}>
+        <span>test</span>
+      </CopyToClipboard>
+    ));
+    const buttonElement = React.findDOMNode(button);
+
+    expect(buttonElement.className).toEqual('testClass');
+    expect(buttonElement.style.display).toEqual('none');
   });
 });

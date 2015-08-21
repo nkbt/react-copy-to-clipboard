@@ -12,7 +12,7 @@ Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
 > Would try to use execCommand with fallback to IE specific clipboardData interface and finally, fallback to simple prompt with proper text content & 'Copy to clipboard: Ctrl+C, Enter'
 
 
-![Copy to clipboard](src/example/copy-to-clipboard.gif)
+![Copy to clipboard](https://cdn.rawgit.com/nkbt/react-copy-to-clipboard/master/src/example/copy-to-clipboard.gif)
 
 
 ## Installation
@@ -35,30 +35,23 @@ bower install --save react-copy-to-clipboard
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-
 const App = React.createClass({
   getInitialState() {
     return {value: '', copied: false};
   },
 
-
   render() {
     return (
       <div>
-
         <input value={this.state.value}
           onChange={({target: {value}}) => this.setState({value, copied: false})} />&nbsp;
 
         <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
-          <button>Copy to clibpoard</button>
+          Copy to clipboard
         </CopyToClipboard>&nbsp;
 
-
         {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
-        
-        
-
       </div>
     );
   }
@@ -81,13 +74,13 @@ Text to be copied to clipboard
 Optional callback, will be called when text is copied
 
 
-#### `children`: React.PropTypes.node.isRequired
+#### `children`
 
-CopyToClipboard is a simple wrapping component, it does not render any tags, so it requires one child element to be present, which will be used to capture clicks.
+CopyToClipboard renders `<button>` element, so you can add some inline elements into it (like `<span>` or just text).
 
 ```js
 <CopyToClipboard text="Hello!">
-  <button>Copy to clipboard</button>
+  <span>Copy to clipboard</span>
 </CopyToClipboard>
 ```
 
@@ -119,8 +112,15 @@ open http://localhost:8080
 
 ## Tests
 
-Only UI tests for now, see [demo](http://nkbt.github.io/react-copy-to-clipboard/example)
+```bash
+npm test
 
+# to run tests in watch mode for development
+npm run test:dev
+
+# to generate test coverage (./reports/coverage)
+npm run test:cov
+```
 
 ## License
 
