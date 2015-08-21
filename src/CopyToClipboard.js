@@ -13,7 +13,6 @@ const onClick = (text, onCopy) => () => {
 const CopyToClipboard = React.createClass({
   propTypes: {
     text: React.PropTypes.string.isRequired,
-    children: React.PropTypes.node,
     onCopy: React.PropTypes.func
   },
 
@@ -21,7 +20,7 @@ const CopyToClipboard = React.createClass({
   render() {
     const {text, onCopy, ...props} = this.props;
 
-    return <button {...props} onClick={onClick(text, onCopy)} />;
+    return <button onClick={onClick(text, onCopy)} {...props} />;
   }
 });
 
