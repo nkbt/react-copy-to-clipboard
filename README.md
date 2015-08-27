@@ -16,7 +16,7 @@ Developing and publishing multiple React components requires a lot of work to ke
 
 ## Contents
 
-- React module boilerpate dependencies and scripts
+- React module boilerplate dependencies and scripts
 - .gitignore and .npmignore
 - CircleCI config
 - ESLint config - Nik Butenko
