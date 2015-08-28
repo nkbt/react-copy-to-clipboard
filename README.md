@@ -1,6 +1,6 @@
 # react-component-template
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nkbt/help)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
 
 [![Circle CI](https://circleci.com/gh/nkbt/react-component-template.svg?style=svg)](https://circleci.com/gh/nkbt/react-component-template)
 [![Coverage Status](https://coveralls.io/repos/nkbt/react-component-template/badge.svg?branch=master)](https://coveralls.io/r/nkbt/react-component-template?branch=master)
