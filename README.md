@@ -1,5 +1,7 @@
 # react-copy-to-clipboard
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
+
 [![Circle CI](https://circleci.com/gh/nkbt/react-copy-to-clipboard.svg?style=svg)](https://circleci.com/gh/nkbt/react-copy-to-clipboard)
 [![Coverage Status](https://coveralls.io/repos/nkbt/react-copy-to-clipboard/badge.svg?branch=master)](https://coveralls.io/r/nkbt/react-copy-to-clipboard?branch=master)
 [![Dependency Status](https://david-dm.org/nkbt/react-copy-to-clipboard.svg)](https://david-dm.org/nkbt/react-copy-to-clipboard)
