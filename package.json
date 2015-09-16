@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "test": "karma start ./karma.conf.js --single-run --reporters nyan",
     "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch --reporters nyan",
-    "test:cov": "COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage",
+    "test:cov": "karma start ./karma.conf.js --single-run --reporters coverage",
     "coveralls": "cat ./reports/coverage/lcov.info | `npm bin`/coveralls",
     "validate": "npm run lint && npm run build && npm run test:cov"
   },
