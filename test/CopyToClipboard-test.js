@@ -31,8 +31,8 @@ describe('CopyToClipboard', () => {
   });
 
 
-  it('should not require children to be present', () => {
-    expect(create).not.toThrow();
+  it('should require children to be present', () => {
+    expect(create).toThrow();
   });
 
 
@@ -42,9 +42,16 @@ describe('CopyToClipboard', () => {
         <span>one</span>
         <span>two</span>
       </CopyToClipboard>
-    ))).not.toThrow();
+    ))).toThrow();
   });
 
+  it('should be expect one child present', () => {
+    expect(() => TestUtils.renderIntoDocument((
+      <CopyToClipboard text="test" onCopy={onCopy}>
+        <span>one</span>
+      </CopyToClipboard>
+    ))).not.toThrow();
+  });
 
   it('should copy on click on child element', () => {
     const span = React.findDOMNode(create(<span>test</span>));
@@ -86,12 +93,13 @@ describe('CopyToClipboard', () => {
       <CopyToClipboard
         text="hello" onCopy={onCopy}
         className="testClass" style={{display: 'none'}}>
-        <span>test</span>
+        <button>test</button>
       </CopyToClipboard>
     ));
     const buttonElement = React.findDOMNode(button);
 
     expect(buttonElement.className).toEqual('testClass');
     expect(buttonElement.style.display).toEqual('none');
+    expect(buttonElement.nodeName.toLowerCase()).toEqual('button');
   });
 });

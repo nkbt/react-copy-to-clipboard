@@ -14,12 +14,12 @@ const App = React.createClass({
           size={10}
           onChange={({target: {value}}) => this.setState({value, copied: false})} />&nbsp;
 
-        <CopyToClipboard text={this.state.value} className="text-blue"
+        <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
           <span>Copy to clipboard with span</span>
         </CopyToClipboard>&nbsp;
 
-        <CopyToClipboard text={this.state.value} className="text-blue"
+        <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
           <button>Copy to clipboard with button</button>
         </CopyToClipboard>&nbsp;
