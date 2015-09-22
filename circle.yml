@@ -6,6 +6,7 @@ machine:
 dependencies:
   pre:
     - npm update -g npm
+    - npm install react@0.13
 
 test:
   override:
