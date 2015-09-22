@@ -170,9 +170,9 @@
     "func-names": 0, // require function expressions to have a name (off by default)
     "func-style": 0, // enforces use of function declarations or expressions (off by default)
     "indent": [2, 2, {"SwitchCase": 1}], // this option sets a specific tab width for your code (off by default)
+    "jsx-quotes": [2, "prefer-double"], // JSX attribute values can contain string literals, which are delimited with single or double quotes.
     "key-spacing": [2, {"beforeColon": false, "afterColon": true}], // enforces spacing between keys and values in object literal properties
-//     "lines-around-comment": [2, {"beforeBlockComment": true, "afterBlockComment": false, "beforeLineComment": true, "afterLineComment": false, "allowBlockStart": true, "allowBlockEnd": true}], //enforces empty lines around comments (off by default)
-     "lines-around-comment": [2, {"beforeBlockComment": true, "afterBlockComment": false, "afterLineComment": false}], // allowBlockStart and allowBlockEnd are broken in 0.24, but fixed in master
+     "lines-around-comment": [2, {"beforeBlockComment": true, "afterBlockComment": false, "afterLineComment": false}], // enforces empty lines around comments (off by default)
     "linebreak-style": [2, "unix"], //disallow mixed 'LF' and 'CRLF' as linebreaks (off by default)
     "max-nested-callbacks": [2, 3], // specify the maximum depth callbacks can be nested (off by default)
     "new-cap": [2, {"newIsCap": true, "capIsNew": false}], // require a capital letter for constructors
@@ -248,7 +248,6 @@
     "react/display-name": 0, // Prevent missing displayName in a React component definition
     "react/jsx-boolean-value": [2, "always"], // Enforce boolean attributes notation in JSX
     "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
-    "react/jsx-quotes": [2, "double", "avoid-escape"], // Enforce quote style for JSX attributes
     "react/jsx-sort-prop-types": 0, // Enforce propTypes declarations alphabetical sorting
     "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
     "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
