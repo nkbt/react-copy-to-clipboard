@@ -15,7 +15,7 @@
     "test": "karma start ./karma.conf.js --single-run --reporters nyan",
     "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch --reporters nyan",
     "test:cov": "karma start ./karma.conf.js --single-run --reporters coverage",
-    "coveralls": "node ./scripts/coveralls",
+    "coveralls": "minicat reports/coverage/lcov.info | coveralls",
     "validate": "npm run lint && npm run build && npm run test:cov"
   },
   "repository": {
@@ -56,6 +56,7 @@
     "karma-nyan-reporter": "0.2.2",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-webpack": "^1.7.0",
+    "minicat": "^1.0.0",
     "mkdirp": "^0.5.1",
     "node-libs-browser": "^0.5.3",
     "phantomjs": "^1.9.18",
