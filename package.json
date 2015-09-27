@@ -11,7 +11,7 @@
     "build:bower": "webpack --config webpack.config.bower.js",
     "prepublish": "npm run build",
     "start": "webpack-dev-server --config webpack.config.development.js",
-    "lint": "eslint .",
+    "lint": "eslint --cache  .",
     "test": "karma start ./karma.conf.js --single-run --reporters nyan",
     "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch --reporters nyan",
     "test:cov": "karma start ./karma.conf.js --single-run --reporters coverage",
