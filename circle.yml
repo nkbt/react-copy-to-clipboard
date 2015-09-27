@@ -10,6 +10,6 @@ dependencies:
 
 test:
   override:
-    - $(npm bin)/eslint . --format tap | $(npm bin)/tap-xunit > $CIRCLE_TEST_REPORTS/lint.xml
+    - $(npm bin)/eslint . --format tap | $(npm bin)/tap-xunit > $CIRCLE_TEST_REPORTS/lint.xml; test ${PIPESTATUS[0]} -eq 0
     - COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage,junit
     - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | $(npm bin)/coveralls || true
