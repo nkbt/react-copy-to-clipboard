@@ -4,19 +4,19 @@
   "description": "React component",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run build:lib && npm run build:example && npm run build:bower",
+    "build": "parallelshell -w 'npm run build:lib -s' 'npm run build:example -s' 'npm run build:bower -s'",
     "prebuild": "rimraf lib example build",
     "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
     "build:example": "webpack --config webpack.config.js",
     "build:bower": "webpack --config webpack.config.bower.js",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build -s",
     "start": "webpack-dev-server --config webpack.config.development.js",
     "lint": "eslint --cache  .",
     "test": "karma start ./karma.conf.js --single-run --reporters nyan",
     "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch --reporters nyan",
     "test:cov": "karma start ./karma.conf.js --single-run --reporters coverage",
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
-    "validate": "npm run lint && npm run build && npm run test:cov"
+    "validate": "npm run lint -s && npm run build -s && npm run test:cov -s"
   },
   "repository": {
     "type": "git",
@@ -59,6 +59,7 @@
     "minicat": "^1.0.0",
     "mkdirp": "^0.5.1",
     "node-libs-browser": "^0.5.3",
+    "parallelshell": "^2.0.0",
     "phantomjs": "^1.9.18",
     "precommit-hook": "^3.0.0",
     "react-hot-loader": "^1.3.0",
