@@ -4,7 +4,7 @@
   "description": "React component",
   "main": "lib/index.js",
   "scripts": {
-    "build": "parallelshell -w 'npm run build:lib -s' 'npm run build:example -s' 'npm run build:bower -s'",
+    "build": "parallelshell -w \"npm run build:lib -s\" \"npm run build:example -s\" \"npm run build:bower -s\"",
     "prebuild": "rimraf lib example build",
     "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
     "build:example": "webpack --config webpack.config.js",
