@@ -3,8 +3,9 @@
 /reports/
 /src/example/
 /test/
-/.*
 /bower.json
 /circle.yml
 /karma.conf.js
 /webpack.config.*
+
+.*
