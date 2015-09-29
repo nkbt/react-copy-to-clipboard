@@ -1,6 +1,7 @@
 /build/
 /example/
 /reports/
+/src/example/
 /test/
 /.*
 /bower.json
