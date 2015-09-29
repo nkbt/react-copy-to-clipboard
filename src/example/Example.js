@@ -1,16 +1,5 @@
 import React from 'react';
-import Component from '..';
-
-
-const App = React.createClass({
-  render() {
-    return (
-      <div>
-        <Component />
-      </div>
-    );
-  }
-});
+import App from './App';
 
 
 React.render(<App />, document.body);
