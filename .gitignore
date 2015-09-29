@@ -11,14 +11,14 @@ pids
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
+/node_modules/
 
 # Precommit hook
-.jshint*
+/.jshint*
 
-lib
+/lib/
 /example/
-.coveralls.yml
+/.coveralls.yml
 /reports/
 
 /.eslintcache
