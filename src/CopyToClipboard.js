@@ -11,8 +11,8 @@ const onClick = (text, onCopy) => () => {
 const CopyToClipboard = React.createClass({
   propTypes: {
     text: React.PropTypes.string.isRequired,
-    onCopy: React.PropTypes.func,
-    children: React.PropTypes.array
+    children: React.PropTypes.element.isRequired,
+    onCopy: React.PropTypes.func
   },
 
 
@@ -20,9 +20,10 @@ const CopyToClipboard = React.createClass({
     const {text, onCopy, children, ...props} = this.props;
     const elem = React.Children.only(children);
 
-    return React.cloneElement(elem, Object.assign({
+    return React.cloneElement(elem, {
+      ...props,
       onClick: onClick(text, onCopy)
-    }, props));
+    });
   }
 });
 
