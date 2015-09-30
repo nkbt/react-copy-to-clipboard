@@ -6,13 +6,15 @@ var rimraf = require('rimraf');
 var mkdirp = require('mkdirp');
 
 
+var withCoverage = process.argv.indexOf('coverage') !== -1 || process.env.COVERAGE;
+
 var webpackConfig = {
   devtool: 'eval',
   resolve: {
     extensions: ['', '.js']
   },
   module: {
-    loaders: process.env.COVERAGE ?
+    loaders: withCoverage ?
       [
         {test: /\.js$/, loader: 'babel', include: [path.resolve('test')]},
         {test: /\.js$/, loader: 'isparta', include: [path.resolve('src')]}
@@ -33,7 +35,7 @@ var coverageDir = path.resolve(
 );
 
 
-if (process.env.COVERAGE) {
+if (withCoverage) {
   rimraf.sync(coverageDir);
   mkdirp.sync(coverageDir);
 }
