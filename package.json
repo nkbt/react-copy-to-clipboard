@@ -39,7 +39,7 @@
     "react": "^0.13 || ~0.14.0-beta || ~0.14.0-rc"
   },
   "dependencies": {
-    "copy-to-clipboard": "^1.0.2"
+    "copy-to-clipboard": "^1.0.4"
   },
   "devDependencies": {
     "babel": "^5.8.23",
