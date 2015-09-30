@@ -50,7 +50,12 @@ const App = React.createClass({
 
         <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
-          Copy to clipboard
+          <span>Copy to clipboard with span</span>
+        </CopyToClipboard>&nbsp;
+
+        <CopyToClipboard text={this.state.value}
+          onCopy={() => this.setState({copied: true})}>
+          <button>Copy to clipboard with button</button>
         </CopyToClipboard>&nbsp;
 
         {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
@@ -76,13 +81,13 @@ Text to be copied to clipboard
 Optional callback, will be called when text is copied
 
 
-#### `children`
+#### `children`: React.PropTypes.node.isRequired
 
-CopyToClipboard renders `<button>` element, so you can add some inline elements into it (like `<span>` or just text).
+CopyToClipboard is a simple wrapping component, it does not render any tags, so it requires the only child element to be present, which will be used to capture clicks.
 
 ```js
 <CopyToClipboard text="Hello!">
-  <span>Copy to clipboard</span>
+  <button>Copy to clipboard</button>
 </CopyToClipboard>
 ```
 

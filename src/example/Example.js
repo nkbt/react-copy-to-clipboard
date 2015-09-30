@@ -1,7 +1,6 @@
 import React from 'react';
 import CopyToClipboard from '..';
 
-
 const App = React.createClass({
   getInitialState() {
     return {value: '', copied: false};
@@ -11,14 +10,18 @@ const App = React.createClass({
   render() {
     return (
       <div>
-
         <input value={this.state.value}
           size={10}
           onChange={({target: {value}}) => this.setState({value, copied: false})} />&nbsp;
 
         <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
-          <span>Copy to clipboard</span>
+          <span>Copy to clipboard with span</span>
+        </CopyToClipboard>&nbsp;
+
+        <CopyToClipboard text={this.state.value}
+          onCopy={() => this.setState({copied: true})}>
+          <button>Copy to clipboard with button</button>
         </CopyToClipboard>&nbsp;
 
 
@@ -32,6 +35,5 @@ const App = React.createClass({
     );
   }
 });
-
 
 React.render(<App />, document.body);
