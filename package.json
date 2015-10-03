@@ -16,12 +16,18 @@
     "test:dev": "karma start ./karma.conf.js --no-single-run --auto-watch --reporters nyan",
     "test:cov": "karma start ./karma.conf.js --single-run --reporters coverage",
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
-    "validate": "npm run lint -s && npm run build -s && npm run test:cov -s"
+    "validate": "npm run lint -s && npm run build -s && npm run test:cov -s",
+    "precommit": "npm run lint -s",
+    "prepush": "npm run validate -s"
   },
   "engines": {
     "node": ">=0.10"
   },
-  "os": ["darwin", "linux", "win32"],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nkbt/react-component-template.git"
@@ -50,6 +56,7 @@
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^3.5.1",
     "html-webpack-plugin": "^1.6.1",
+    "husky": "^0.10.1",
     "inject-loader": "^2.0.1",
     "isparta-loader": "^1.0.0",
     "jasmine-core": "^2.3.4",
@@ -65,14 +72,10 @@
     "node-libs-browser": "^0.5.3",
     "parallelshell": "^2.0.0",
     "phantomjs": "^1.9.18",
-    "precommit-hook": "^3.0.0",
     "react-hot-loader": "^1.3.0",
     "rimraf": "^2.4.3",
     "tap-xunit": "^1.2.1",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
-  },
-  "pre-commit": [
-    "lint"
-  ]
+  }
 }
