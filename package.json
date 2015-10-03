@@ -18,7 +18,8 @@
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
     "validate": "npm run lint -s && npm run build -s && npm run test:cov -s",
     "precommit": "npm run lint -s",
-    "prepush": "npm run validate -s"
+    "prepush": "npm run validate -s",
+    "postversion": "git push && git push --tags"
   },
   "engines": {
     "node": ">=0.10"
