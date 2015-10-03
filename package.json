@@ -18,6 +18,10 @@
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
     "validate": "npm run lint -s && npm run build -s && npm run test:cov -s"
   },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "os": ["darwin", "linux", "win32"],
   "repository": {
     "type": "git",
     "url": "https://github.com/nkbt/react-component-template.git"
