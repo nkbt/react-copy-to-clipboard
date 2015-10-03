@@ -1,3 +1,5 @@
+/.*/
+/.*
 /build/
 /example/
 /reports/
@@ -7,5 +9,3 @@
 /circle.yml
 /karma.conf.js
 /webpack.config.*
-
-.*
