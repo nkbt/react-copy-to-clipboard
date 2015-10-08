@@ -4,6 +4,8 @@
   "description": "React component",
   "main": "lib/index.js",
   "scripts": {
+    "pregh-pages": "git fetch origin",
+    "gh-pages": "git checkout gh-pages && git rebase origin/master --force-rebase && npm run build && git add . && git commit --amend --no-edit && git push --force && git checkout master",
     "build": "parallelshell -w \"npm run build:lib -s\" \"npm run build:example -s\" \"npm run build:bower -s\"",
     "prebuild": "rimraf lib example build",
     "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
