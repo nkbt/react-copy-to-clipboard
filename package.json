@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/nkbt/react-component-template",
   "peerDependencies": {
-    "react": "^0.13 || ~0.14.0-beta || ~0.14.0-rc"
+    "react": "^0.13 || ^0.14"
   },
   "devDependencies": {
     "babel": "^5.8.23",
@@ -73,6 +73,7 @@
     "node-libs-browser": "^0.5.3",
     "parallelshell": "^2.0.0",
     "phantomjs": "^1.9.18",
+    "react": "^0.14.0",
     "react-hot-loader": "^1.3.0",
     "rimraf": "^2.4.3",
     "tap-xunit": "^1.2.1",
