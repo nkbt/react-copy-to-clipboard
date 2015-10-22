@@ -21,7 +21,10 @@
     "validate": "npm run lint -s && npm run build -s && npm run test:cov -s",
     "precommit": "npm run lint -s",
     "prepush": "npm run validate -s",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "bower:create-repo": "./scripts/create-repo.sh",
+    "bower:publish": "./scripts/publish.sh",
+    "bower:register": "./scripts/register.sh"
   },
   "engines": {
     "node": ">=0.10"
