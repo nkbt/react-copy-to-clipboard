@@ -7,8 +7,20 @@ dependencies:
   pre:
     - npm update -g npm@3
 
+  post:
+    - $(npm bin)/selenium-standalone install
+
 test:
+  pre:
+    - npm start:
+        background: true
+    - $(npm bin)/selenium-standalone start -debug:
+        background: true
+
   override:
     - $(npm bin)/eslint --debug . --format tap | $(npm bin)/tap-xunit > $CIRCLE_TEST_REPORTS/lint.xml; test ${PIPESTATUS[0]} -eq 0
     - COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage,junit
+    - $(npm bin)/nightwatch --config ./nightwatch.json --output $CIRCLE_TEST_REPORTS
+
+  post:
     - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | $(npm bin)/coveralls || true
