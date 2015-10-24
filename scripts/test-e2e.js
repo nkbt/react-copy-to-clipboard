@@ -67,7 +67,7 @@ function onSeleniumInstalled(err) {
     return process.exit(1);
   }
 
-  selenium.start({debug: true}, onSeleniumStarted);
+  selenium.start({seleniumArgs: ['-debug']}, onSeleniumStarted);
 }
 
 
