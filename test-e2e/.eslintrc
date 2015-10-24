@@ -1,8 +1,0 @@
-{
-  "extends": "../src/.eslintrc",
-
-  "rules": {
-    "one-var": 0,
-    "no-undefined": 0
-  }
-}
