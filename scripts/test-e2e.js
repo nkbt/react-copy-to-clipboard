@@ -9,6 +9,8 @@ var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require(path.resolve(__dirname, '..', 'webpack.config.js'));
 var logDir = process.env.LOG_DIR ?
   path.resolve(process.env.LOG_DIR) : path.resolve(__dirname, '..', 'reports');
+var reportDir = process.env.REPORT_DIR ?
+  path.resolve(process.env.REPORT_DIR) : path.resolve(__dirname, '..', 'reports', 'test-e2e');
 
 var seleniumLog = fs.createWriteStream(path.resolve(logDir, 'selenium.log'));
 var nightwatchRunner = path
@@ -30,7 +32,11 @@ function onServerStarted(seleniumChild) {
       return process.exit(1);
     }
 
-    cp.fork(nightwatchRunner, ['--config', path.resolve(__dirname, '..', 'nightwatch.json')])
+    cp.fork(nightwatchRunner,
+      [
+        '--config', path.resolve(__dirname, '..', 'nightwatch.json'),
+        '--output', reportDir
+      ])
       .on('error', function (error) {
         console.error(error);
         seleniumChild.kill('SIGHUP');
