@@ -11,7 +11,7 @@ test:
   override:
     - $(npm bin)/eslint --debug . --format tap | $(npm bin)/tap-xunit > ${CIRCLE_TEST_REPORTS}/lint.xml; test ${PIPESTATUS[0]} -eq 0
     - $(npm bin)/babel-node $(npm bin)/tape test/**/*-test.js | $(npm bin)/tap-xunit > ${CIRCLE_TEST_REPORTS}/test.xml; test ${PIPESTATUS[0]} -eq 0
-    - $(npm bin)/babel-node $(npm bin)/isparta cover --report text --report lcov --verbose --dir ${CIRCLE_ARTIFACTS}/coverage test/index.js
+    - $(npm bin)/babel-node $(npm bin)/isparta cover --report text --report lcov --verbose --dir ${CIRCLE_ARTIFACTS}/coverage  --include '**/!(*-test).js' test/index.js
     - REPORT_DIR=${CIRCLE_TEST_REPORTS} LOG_DIR=${CIRCLE_ARTIFACTS} npm run test:e2e -s
 
   post:
