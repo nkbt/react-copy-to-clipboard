@@ -28,7 +28,7 @@ function onServerStarted(seleniumChild) {
   return function (err) {
     if (err) {
       console.error(err);
-      seleniumChild.kill('SIGHUP');
+      seleniumChild.kill('SIGINT');
       return process.exit(1);
     }
 
@@ -39,11 +39,11 @@ function onServerStarted(seleniumChild) {
       ])
       .on('error', function (error) {
         console.error(error);
-        seleniumChild.kill('SIGHUP');
+        seleniumChild.kill('SIGINT');
         return process.exit(1);
       })
       .on('close', function (code) {
-        seleniumChild.kill('SIGHUP');
+        seleniumChild.kill('SIGINT');
         process.exit(code);
       });
   };
