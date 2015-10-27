@@ -15,7 +15,7 @@
     "start": "webpack-dev-server --config webpack.config.development.js",
     "test": "babel-node node_modules/tape/bin/tape test/**/*-test.js",
     "test:dev": "babel-node node_modules/tape/bin/tape test/**/*-test.js | tap-nyan",
-    "test:cov": "babel-node node_modules/isparta/bin/isparta cover --report text --report html --dir reports/coverage test/index.js",
+    "test:cov": "babel-node node_modules/isparta/bin/isparta cover --report text --report lcov --dir reports/coverage test/index.js",
     "test:e2e": "node scripts/test-e2e.js",
     "lint": "eslint --cache  .",
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
