@@ -6,6 +6,7 @@
 /scripts/
 /src/example/
 /test/
+/test-e2e/
 /bower.json
 /circle.yml
 /karma.conf.js
