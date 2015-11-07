@@ -5,14 +5,14 @@ machine:
 
 dependencies:
   pre:
-    - npm update -g npm@3
+    - npm install -g npm@3
 
 test:
   override:
-    - $(npm bin)/eslint --debug . --format tap | $(npm bin)/tap-xunit > ${CIRCLE_TEST_REPORTS}/lint.xml; test ${PIPESTATUS[0]} -eq 0
-    - $(npm bin)/babel-node $(npm bin)/tape test/**/*-test.js | $(npm bin)/tap-xunit > ${CIRCLE_TEST_REPORTS}/test.xml; test ${PIPESTATUS[0]} -eq 0
-    - $(npm bin)/babel-node $(npm bin)/isparta cover --report text --report lcov --verbose --dir ${CIRCLE_ARTIFACTS}/coverage  --include '**/!(*-test).js' test/index.js
+    - ./node_modules/.bin/eslint --debug . --format tap | ./node_modules/.bin/tap-xunit > ${CIRCLE_TEST_REPORTS}/lint.xml; test ${PIPESTATUS[0]} -eq 0
+    - npm run babel-node -- ./node_modules/.bin/tape test/**/*-test.js | ./node_modules/.bin/tap-xunit > ${CIRCLE_TEST_REPORTS}/test.xml; test ${PIPESTATUS[0]} -eq 0
+    - npm run babel-node -- ./node_modules/.bin/isparta cover --report text --report lcov --verbose --dir ${CIRCLE_ARTIFACTS}/coverage  --include '**/!(*-test).js' test/index.js
     - REPORT_DIR=${CIRCLE_TEST_REPORTS} LOG_DIR=${CIRCLE_ARTIFACTS} npm run test:e2e -s
 
   post:
-    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | $(npm bin)/coveralls || true
+    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | ./node_modules/.bin/coveralls || true
