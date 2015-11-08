@@ -18,7 +18,7 @@
     "test": "npm run babel-node -- node_modules/tape/bin/tape test/**/*-test.js",
     "test:dev": "npm run babel-node -- node_modules/tape/bin/tape test/**/*-test.js | tap-nyan",
     "test:cov": "npm run babel-node -- node_modules/isparta/bin/isparta cover --report text --report html --dir reports/coverage --include \"**/!(*-test).js\" test",
-    "test:e2e": "node scripts/test-e2e.js",
+    "test:e2e": "nightwatch-autorun",
     "lint": "eslint --cache .",
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
     "precommit": "npm run lint -s",
