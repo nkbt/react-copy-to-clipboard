@@ -74,6 +74,7 @@
     "isparta": "^3.5.3",
     "minicat": "^1.0.0",
     "nightwatch": "^0.8.6",
+    "nightwatch-autorun": "^1.0.0",
     "node-libs-browser": "^0.5.3",
     "parallelshell": "^2.0.0",
     "react": "^0.14.2",
