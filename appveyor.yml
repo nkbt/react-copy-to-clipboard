@@ -1,0 +1,19 @@
+environment:
+  matrix:
+    - nodejs_version: '0.10.40'
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - set CI=true
+  - npm -g install npm@3
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm install
+matrix:
+  fast_finish: true
+build: off
+version: '{build}'
+shallow_clone: true
+clone_depth: 1
+test_script:
+  - node --version
+  - npm --version
+  - npm test
