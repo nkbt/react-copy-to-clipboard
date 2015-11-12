@@ -55,7 +55,7 @@
     "react": "^0.13 || ^0.14"
   },
   "devDependencies": {
-    "babel": "^6.0.15",
+    "babel": "^6.1.5",
     "babel-cli": "^6.1.4",
     "babel-core": "^6.1.4",
     "babel-eslint": "^4.1.5",
