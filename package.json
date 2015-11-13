@@ -55,7 +55,6 @@
     "react": "^0.13 || ^0.14"
   },
   "devDependencies": {
-    "babel": "^6.1.5",
     "babel-cli": "^6.1.4",
     "babel-core": "^6.1.4",
     "babel-eslint": "^4.1.5",
@@ -75,7 +74,6 @@
     "minicat": "^1.0.0",
     "nightwatch": "^0.8.6",
     "nightwatch-autorun": "^1.0.0",
-    "node-libs-browser": "^0.5.3",
     "parallelshell": "^2.0.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
