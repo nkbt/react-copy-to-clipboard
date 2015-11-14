@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "React component",
   "main": "lib/index.js",
+  "babel": {
+    "presets": ["es2015", "react"],
+    "plugins": ["transform-es2015-modules-commonjs", "transform-object-rest-spread"]
+  },
   "scripts": {
-    "babel-node": "babel-node --presets es2015,react --plugins transform-es2015-modules-commonjs,transform-object-rest-spread",
     "babel": "babel --presets es2015,react --plugins transform-es2015-modules-commonjs,transform-object-rest-spread",
     "pregh-pages": "git fetch origin",
     "gh-pages": "git checkout gh-pages && git rebase origin/master --force-rebase && npm run build && git add . && git commit --amend --no-edit && git push --force && git checkout master",
@@ -15,9 +18,9 @@
     "build:bower": "webpack --config webpack.config.bower.js",
     "prepublish": "npm run build -s",
     "start": "webpack-dev-server --config webpack.config.development.js",
-    "test": "npm run babel-node -- node_modules/tape/bin/tape test/**/*-test.js",
-    "test:dev": "npm run babel-node -- node_modules/tape/bin/tape test/**/*-test.js | tap-nyan",
-    "test:cov": "npm run babel-node -- node_modules/isparta/bin/isparta cover --report text --report html --dir reports/coverage --include \"**/!(*-test).js\" test",
+    "test": "babel-node node_modules/tape/bin/tape test/**/*-test.js",
+    "test:dev": "babel-node node_modules/tape/bin/tape test/**/*-test.js | tap-nyan",
+    "test:cov": "babel-node node_modules/isparta/bin/isparta cover --report text --report html --dir reports/coverage --include \"**/!(*-test).js\" test",
     "test:e2e": "nightwatch-autorun",
     "lint": "eslint --cache .",
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
