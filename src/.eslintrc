@@ -289,21 +289,33 @@
     // React specific linting rules for ESLint
     //
     "react/display-name": 0, // Prevent missing displayName in a React component definition
+    "react/forbid-prop-types": [2, ["any", "array", "object"]], // Forbid certain propTypes
     "react/jsx-boolean-value": [2, "always"], // Enforce boolean attributes notation in JSX
+    "react/jsx-closing-bracket-location": [2, "props-aligned"], // Validate closing bracket location in JSX
+    "react/jsx-curly-spacing": [2, "never"], // Enforce or disallow spaces inside of curly braces in JSX attributes
+    "react/jsx-indent-props": [2, 2], // Validate props indentation in JSX
+    "react/jsx-max-props-per-line": 0, // Limit maximum of props on a single line in JSX
+    "react/jsx-no-bind": 2, // Prevent usage of .bind() and arrow functions in JSX props
+    "react/jsx-no-duplicate-props": [2, {"ignoreCase": true}], // Prevent duplicate props in JSX
+    "react/jsx-no-literals": 2, // Prevent usage of unwrapped JSX strings
     "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
     "react/jsx-sort-prop-types": 0, // Enforce propTypes declarations alphabetical sorting
     "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
     "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
     "react/jsx-uses-vars": 2, // Prevent variables used in JSX to be incorrectly marked as unused
+    "react/no-danger": 2, // Prevent usage of dangerous JSX properties
     "react/no-did-mount-set-state": 2, // Prevent usage of setState in componentDidMount
     "react/no-did-update-set-state": 2, // Prevent usage of setState in componentDidUpdate
+    "react/no-direct-mutation-state": 2, // Prevent direct mutation of this.state
     "react/no-multi-comp": 0, // Prevent multiple component definition per file
+    "react/no-set-state": 0, // Prevent usage of setState
     "react/no-unknown-property": 2, // Prevent usage of unknown DOM property
+    "react/prefer-es6-class": 0, // Prefer es6 class instead of createClass for React Components
     "react/prop-types": 2, // Prevent missing props validation in a React component definition
     "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
     "react/require-extension": [1, { "extensions": [".js"] }], // Restrict file extensions that may be required
     "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
-    "react/wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
-    "react/sort-comp": 2 // Enforce component methods order (sort-comp)
+    "react/sort-comp": 2, // Enforce component methods order
+    "react/wrap-multilines": 2 // Prevent missing parentheses around multilines JSX
   }
 }
