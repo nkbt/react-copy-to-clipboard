@@ -13,3 +13,4 @@
 /karma.conf.js
 /webpack.config.*
 /nightwatch.json
+/appveyor.yml
