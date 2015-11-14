@@ -106,7 +106,7 @@
     "no-labels": 2, // disallow use of labeled statements
     "no-lone-blocks": 2, // disallow unnecessary nested blocks
     "no-loop-func": 2, // disallow creation of functions within loops
-    "no-magic-numbers": 2, // disallow the use of magic numbers
+    "no-magic-numbers": 0, // disallow the use of magic numbers
     "no-multi-spaces": 2, // disallow use of multiple spaces
     "no-multi-str": 2, // disallow use of multiline strings
     "no-native-reassign": 2, // disallow reassignments of native objects
@@ -253,7 +253,7 @@
     "arrow-spacing": 2, // require space before/after arrow function's arrow
     "constructor-super": 2, // verify calls of super() in constructors
     "generator-star-spacing": [2, "before"], // enforce spacing around the * in generator functions
-    "no-arrow-condition": 2, // disallow arrow functions where a condition is expected
+    "no-arrow-condition": 0, // disallow arrow functions where a condition is expected
     "no-class-assign": 2, // disallow modifying variables of class declarations
     "no-const-assign": 2, // disallow modifying variables that are declared using const
     "no-dupe-class-members": 2, // disallow duplicate name in class members
@@ -289,15 +289,15 @@
     // React specific linting rules for ESLint
     //
     "react/display-name": 0, // Prevent missing displayName in a React component definition
-    "react/forbid-prop-types": [2, ["any", "array", "object"]], // Forbid certain propTypes
+    "react/forbid-prop-types": [2, ["any", "array"]], // Forbid certain propTypes
     "react/jsx-boolean-value": [2, "always"], // Enforce boolean attributes notation in JSX
-    "react/jsx-closing-bracket-location": [2, "props-aligned"], // Validate closing bracket location in JSX
+    "react/jsx-closing-bracket-location": [2, {"selfClosing": "after-props", "nonEmpty": "after-props"}], // Validate closing bracket location in JSX
     "react/jsx-curly-spacing": [2, "never"], // Enforce or disallow spaces inside of curly braces in JSX attributes
     "react/jsx-indent-props": [2, 2], // Validate props indentation in JSX
     "react/jsx-max-props-per-line": 0, // Limit maximum of props on a single line in JSX
     "react/jsx-no-bind": 2, // Prevent usage of .bind() and arrow functions in JSX props
     "react/jsx-no-duplicate-props": [2, {"ignoreCase": true}], // Prevent duplicate props in JSX
-    "react/jsx-no-literals": 2, // Prevent usage of unwrapped JSX strings
+    "react/jsx-no-literals": 0, // Prevent usage of unwrapped JSX strings
     "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
     "react/jsx-sort-prop-types": 0, // Enforce propTypes declarations alphabetical sorting
     "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
