@@ -68,7 +68,7 @@
     "glob": "^6.0.1",
     "html-webpack-plugin": "^1.6.2",
     "husky": "^0.10.1",
-    "isparta": "^3.5.3",
+    "isparta": "^4.0.0",
     "minicat": "^1.0.0",
     "nightwatch": "^0.8.6",
     "nightwatch-autorun": "^1.0.0",
