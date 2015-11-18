@@ -3,11 +3,6 @@
 
 var webpack = require('webpack');
 var path = require('path');
-var babelLoader = 'babel?' +
-  JSON.stringify({
-    presets: ['es2015', 'react'],
-    plugins: ['transform-es2015-modules-commonjs', 'transform-object-rest-spread']
-  });
 
 
 module.exports = {
@@ -28,7 +23,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, loader: babelLoader, include: [path.resolve('src')]}
+      {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
     ]
   },
   resolve: {extensions: ['', '.js']},
