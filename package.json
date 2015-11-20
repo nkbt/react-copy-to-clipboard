@@ -12,6 +12,7 @@
     "build:example": "webpack --config webpack.config.js",
     "build:bower": "webpack --config webpack.config.bower.js",
     "prepublish": "parallelshell -w \"npm run build:lib -s\" \"npm run build:bower -s\" && node scripts/bower-version.js",
+    "postpublish": "rimraf build.zip",
     "start": "webpack-dev-server --config webpack.config.development.js",
     "test": "babel-node node_modules/tape/bin/tape test/**/*-test.js",
     "test:dev": "babel-node node_modules/tape/bin/tape test/**/*-test.js | tap-nyan",
