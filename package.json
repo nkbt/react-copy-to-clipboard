@@ -11,7 +11,7 @@
     "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
     "build:example": "webpack --config webpack.config.js",
     "build:bower": "webpack --config webpack.config.bower.js",
-    "prepublish": "npm run build -s",
+    "prepublish": "parallelshell -w \"npm run build:lib -s\" \"npm run build:bower -s\" && node scripts/bower-version.js",
     "start": "webpack-dev-server --config webpack.config.development.js",
     "test": "babel-node node_modules/tape/bin/tape test/**/*-test.js",
     "test:dev": "babel-node node_modules/tape/bin/tape test/**/*-test.js | tap-nyan",
