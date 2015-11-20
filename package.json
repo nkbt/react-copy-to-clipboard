@@ -21,10 +21,7 @@
     "coveralls": "minicat reports/coverage/lcov.info | coveralls",
     "precommit": "npm run lint -s",
     "prepush": "npm run test -s && npm run test:e2e -s",
-    "postversion": "git push --follow-tags",
-    "bower:create-repo": "./scripts/create-repo.sh",
-    "bower:publish": "./scripts/publish.sh",
-    "bower:register": "./scripts/register.sh"
+    "postversion": "git push --follow-tags"
   },
   "engines": {
     "node": ">=0.10"
