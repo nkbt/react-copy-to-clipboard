@@ -21,4 +21,4 @@ glob.sync('*', {nodir: true, cwd: build}).forEach(function (file) {
 
 
 fs.writeFileSync(path.join(root, 'build.zip'),
-  zip.generate({type: 'nodebuffer'}));
+  zip.generate({type: 'nodebuffer', compression: 'DEFLATE', compressionOptions: {level: 9}}));
