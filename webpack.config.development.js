@@ -1,6 +1,9 @@
 'use strict';
 
 
+process.env.NODE_ENV = 'development';
+
+
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
@@ -19,7 +22,7 @@ module.exports = {
     new HtmlWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"development"'
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     }),
     new webpack.HotModuleReplacementPlugin()
