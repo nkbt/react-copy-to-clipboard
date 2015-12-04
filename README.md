@@ -41,3 +41,120 @@ Developing and publishing multiple React components requires a lot of work to ke
 
 3. Fix conflicts
 4. If update needed, repeat
+
+
+# Template-based component features
+
+## Installation
+
+Considering the name is `react-my-component` and it is published to NPM
+
+### NPM
+
+```sh
+npm install --save react-my-component
+```
+
+
+### Bower:
+```sh
+bower install --save https://npmcdn.com/react-my-component/build/react-my-component.js
+```
+
+or in `bower.json`
+
+```json
+{
+  "dependencies": {
+    "react-motion": "https://npmcdn.com/react-my-component/build/react-my-component.js"
+  }
+}
+```
+
+then include as
+```html
+<script src="bower_components/react-my-component/index.js"></script>
+```
+
+
+### 1998 Script Tag:
+```html
+<script src="https://npmcdn.com/react-my-component/build/react-my-component.js"></script>
+(Module exposed as `ReactMyComponent`)
+```
+
+
+## Demo
+
+Publishing on `gh-pages`:
+- do a build
+- allow `/example` in `.gitignore`
+- commit and push to `gh-pages`
+
+[http://nkbt.github.io/react-my-component/example](http://nkbt.github.io/react-my-component/example)
+
+## Codepen demo
+
+```js
+// TODO
+```
+
+
+## Usage
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MyComponent from 'react-my-component';
+
+const App = React.createClass({
+  render() {
+    return (
+      <div>
+        <MyComponent some="prop" />
+      </div>
+    );
+  }
+});
+
+const appRoot = document.createElement('div');
+document.body.appendChild(appRoot);
+ReactDOM.render(<App />, appRoot);
+```
+
+## Options
+
+
+```js
+// TODO: list component props
+```
+
+
+## Development and testing
+
+To run example covering all `MyComponent` features, use `npm start`, which will compile `src/example/Example.js`
+
+```bash
+git clone git@github.com:nkbt/react-my-component.git
+cd react-my-component
+npm install
+npm start
+
+# then
+open http://localhost:8080
+```
+
+## Tests
+
+```bash
+npm test
+
+# to run tests in watch mode for development
+npm run test:dev
+
+# to generate test coverage (./reports/coverage)
+npm run test:cov
+```
+
+## License
+
+MIT
