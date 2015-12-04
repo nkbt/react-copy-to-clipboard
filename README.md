@@ -65,6 +65,7 @@ then include as
 ## Usage
 ```js
 import React from 'react';
+import ReactDOM from 'react-dom';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 const App = React.createClass({
@@ -94,8 +95,9 @@ const App = React.createClass({
   }
 });
 
-
-React.render(<App />, document.body);
+const appRoot = document.createElement('div');
+document.body.appendChild(appRoot);
+ReactDOM.render(<App />, appRoot);
 ```
 
 ## Options
