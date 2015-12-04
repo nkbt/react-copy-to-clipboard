@@ -19,20 +19,50 @@ Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
 
 ## Installation
 
-### npm
+### NPM
 
 ```sh
 npm install --save react-copy-to-clipboard
 ```
 
-### bower
 
+### Bower:
 ```sh
-bower install --save react-copy-to-clipboard
+bower install --save https://npmcdn.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js
 ```
 
-## Usage
+or in `bower.json`
 
+```json
+{
+  "dependencies": {
+    "react-motion": "https://npmcdn.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"
+  }
+}
+```
+
+then include as
+```html
+<script src="bower_components/react-copy-to-clipboard/index.js"></script>
+```
+
+
+### 1998 Script Tag:
+```html
+<script src="https://npmcdn.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
+(Module exposed as `CopyToClipboard`)
+```
+
+
+## Demo
+
+[http://nkbt.github.io/react-copy-to-clipboard/example](http://nkbt.github.io/react-copy-to-clipboard/example)
+
+## Codepen demo
+
+[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv)
+
+## Usage
 ```js
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -94,7 +124,7 @@ CopyToClipboard is a simple wrapping component, it does not render any tags, so 
 
 ## Development and testing
 
-To run comprehensive example covering all `InFlux` features, use `npm start`, which will compile `src/example/Example.js`
+To run example covering all `CopyToClipboard` features, use `npm start`, which will compile `src/example/Example.js`
 
 ```bash
 git clone git@github.com:nkbt/react-copy-to-clipboard.git
@@ -105,17 +135,6 @@ npm start
 # then
 open http://localhost:8080
 ```
-
-
-## Demo
-
-[http://nkbt.github.io/react-copy-to-clipboard/example](http://nkbt.github.io/react-copy-to-clipboard/example)
-
-
-## Codepen demo
-
-[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv)
-
 
 ## Tests
 
