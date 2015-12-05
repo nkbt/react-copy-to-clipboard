@@ -8,20 +8,26 @@ const App = React.createClass({
   },
 
 
+  onChange({target: {value}}) {
+    this.setState({value, copied: false});
+  },
+
+
+  onCopy() {
+    this.setState({copied: true});
+  },
+
+
   render() {
     return (
       <div>
-        <input value={this.state.value}
-          size={10}
-          onChange={({target: {value}}) => this.setState({value, copied: false})} />&nbsp;
+        <input value={this.state.value} size={10} onChange={this.onChange} />&nbsp;
 
-        <CopyToClipboard text={this.state.value}
-          onCopy={() => this.setState({copied: true})}>
+        <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
           <span>Copy to clipboard with span</span>
         </CopyToClipboard>&nbsp;
 
-        <CopyToClipboard text={this.state.value}
-          onCopy={() => this.setState({copied: true})}>
+        <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
           <button>Copy to clipboard with button</button>
         </CopyToClipboard>&nbsp;
 
