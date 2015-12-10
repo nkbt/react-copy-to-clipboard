@@ -10,7 +10,7 @@ var path = require('path');
 
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
 
   entry: [
     './src/example/Example.js',
