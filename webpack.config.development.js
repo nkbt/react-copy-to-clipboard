@@ -10,7 +10,7 @@ var path = require('path');
 
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
 
   entry: [
     './src/example/Example.js',
@@ -29,10 +29,10 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, loaders: ['react-hot', 'babel'], include: [path.resolve('src')]}
+      {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
     ],
     preLoaders: [
-      {test: /\.js$/, loaders: ['eslint'], include: [path.resolve('src')]}
+      {test: /\.js$/, loader: 'eslint', include: [path.resolve('src')]}
     ]
   },
   resolve: {extensions: ['', '.js']},

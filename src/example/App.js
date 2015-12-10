@@ -1,5 +1,5 @@
 import React from 'react';
-import Component from '..';
+import Component from '../Component';
 
 
 const App = React.createClass({
