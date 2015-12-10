@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
 
 
 process.env.NODE_ENV = 'production';
 
 
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 
 module.exports = {
   devtool: 'source-map',
   entry: './src/index.js',
   output: {
-    filename: require('./package.json').name + '.js',
+    filename: `${require('./package.json').name}.js`,
     path: path.resolve('build'),
     library: 'Component',
     libraryTarget: 'umd'

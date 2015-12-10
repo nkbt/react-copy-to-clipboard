@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
 
 process.env.NODE_ENV = 'production';
 
 
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 
 module.exports = {
