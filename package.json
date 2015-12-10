@@ -25,7 +25,7 @@
     "postversion": "git push --follow-tags"
   },
   "engines": {
-    "node": ">=4"
+    "node": "^5.0.0"
   },
   "os": [
     "darwin",
