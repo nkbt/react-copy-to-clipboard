@@ -1,10 +1,9 @@
 environment:
   matrix:
-    - nodejs_version: '0.10.40'
+    - nodejs_version: '5.2.0'
 install:
   - ps: Install-Product node $env:nodejs_version
   - set CI=true
-  - npm -g install npm@3
   - set PATH=%APPDATA%\npm;%PATH%
   - npm install
 matrix:
