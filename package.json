@@ -8,7 +8,7 @@
     "gh-pages": "git checkout gh-pages && git rebase origin/master --force-rebase && npm run build && git add . && git commit --amend --no-edit && git push --force && git checkout master",
     "build": "parallelshell -w \"npm run build:lib -s\" \"npm run build:example -s\" \"npm run build:bower -s\"",
     "prebuild": "rimraf lib example build",
-    "build:lib": "babel src --out-dir lib --source-maps --ignore src/example",
+    "build:lib": "node ./scripts/env.js production \"babel src --out-dir lib --source-maps --ignore src/example\"",
     "build:example": "webpack --config webpack.config.js",
     "build:bower": "webpack --config webpack.config.bower.js",
     "prepublish": "parallelshell -w \"npm run build:lib -s\" \"npm run build:bower -s\" && node scripts/bower-version.js",
