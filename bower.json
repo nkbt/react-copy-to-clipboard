@@ -1,8 +1,11 @@
 {
   "name": "react-component-template",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "React component",
-  "main": "react-component-template.js",
+  "main": [
+    "build/react-component-template.js",
+    "build/react-component-template.js.map"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bower-registry/react-component-template.git"
@@ -18,7 +21,7 @@
   "license": "MIT",
   "homepage": "https://github.com/nkbt/react-component-template",
   "dependencies": {
-    "react": "^0.13 || ^0.14"
+    "react": "^0.14"
   },
   "ignore": [
     "**/.*",
