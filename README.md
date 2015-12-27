@@ -59,7 +59,7 @@ npm install --save react-my-component
 
 ### Bower:
 ```sh
-bower install --save https://npmcdn.com/react-my-component/build/react-my-component.js
+bower install --save https://npmcdn.com/react-my-component/bower.zip
 ```
 
 or in `bower.json`
@@ -67,14 +67,14 @@ or in `bower.json`
 ```json
 {
   "dependencies": {
-    "react-my-component": "https://npmcdn.com/react-my-component/build/react-my-component.js"
+    "react-my-component": "https://npmcdn.com/react-my-component/bower.zip"
   }
 }
 ```
 
 then include as
 ```html
-<script src="bower_components/react-my-component/index.js"></script>
+<script src="bower_components/react-my-component/build/react-my-component.js"></script>
 ```
 
 
