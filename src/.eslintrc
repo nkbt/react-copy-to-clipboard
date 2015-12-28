@@ -295,7 +295,7 @@
     "react/jsx-curly-spacing": [2, "never"], // Enforce or disallow spaces inside of curly braces in JSX attributes
     "react/jsx-indent-props": [2, 2], // Validate props indentation in JSX
     "react/jsx-max-props-per-line": 0, // Limit maximum of props on a single line in JSX
-    "react/jsx-no-bind": 2, // Prevent usage of .bind() and arrow functions in JSX props
+    "react/jsx-no-bind": [2, {"allowArrowFunctions": true}], // Prevent usage of .bind() and arrow functions in JSX props
     "react/jsx-no-duplicate-props": [2, {"ignoreCase": true}], // Prevent duplicate props in JSX
     "react/jsx-no-literals": 0, // Prevent usage of unwrapped JSX strings
     "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
