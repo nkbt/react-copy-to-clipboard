@@ -4,11 +4,13 @@
   "description": "React component",
   "main": [
     "build/react-component-template.js",
-    "build/react-component-template.js.map"
+    "build/react-component-template.js.map",
+    "build/react-component-template.min.js",
+    "build/react-component-template.min.js.map"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bower-registry/react-component-template.git"
+    "url": "https://github.com/nkbt/react-component-template.git"
   },
   "keywords": [
     "component",
@@ -22,12 +24,5 @@
   "homepage": "https://github.com/nkbt/react-component-template",
   "dependencies": {
     "react": "^0.14"
-  },
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  }
 }
