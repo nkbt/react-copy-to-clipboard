@@ -44,7 +44,6 @@ const dev = {
   },
   resolve,
   stats,
-  eslint: {configFile: 'src/.eslintrc'},
   devServer: {
     hot: true,
     historyApiFallback: true,
@@ -113,4 +112,4 @@ const min = {
 };
 
 
-module.exports = {dev, ghPages, dist, min}[process.env.BUILD];
+module.exports = {dev, ghPages, dist, min}[process.env.BUILD] || dev;
