@@ -8,6 +8,7 @@ const path = require('path');
 
 const loaders = [
   {test: /\.css$/, loader: 'css?modules', include: [path.resolve('src/example')]},
+  {test: /\.json$/, loader: 'json', include: [path.resolve('src/example')]},
   {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
 ];
 
