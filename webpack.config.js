@@ -7,6 +7,7 @@ const path = require('path');
 
 
 const loaders = [
+  {test: /\.css$/, loader: 'css?modules', include: [path.resolve('src/example')]},
   {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
 ];
 
@@ -112,4 +113,10 @@ const min = {
 };
 
 
-module.exports = {dev, ghPages, dist, min}[process.env.BUILD] || dev;
+const test = {
+  output: {libraryTarget: 'commonjs2'},
+  module: {loaders}
+};
+
+
+module.exports = {dev, ghPages, dist, min, test}[process.env.BUILD || process.env.NODE_ENV] || dev;
