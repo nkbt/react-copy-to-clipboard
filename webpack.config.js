@@ -24,7 +24,7 @@ const resolve = {extensions: ['', '.js']};
 const stats = {colors: true};
 
 
-const dev = {
+const development = {
   devtool: 'cheap-module-eval-source-map',
 
   entry: [
@@ -120,4 +120,8 @@ const test = {
 };
 
 
-module.exports = {dev, ghPages, dist, min, test}[process.env.BUILD || process.env.NODE_ENV] || dev;
+const configs = {development, ghPages, dist, min, test};
+const build = process.env.BUILD || process.env.NODE_ENV || 'development';
+
+
+module.exports = configs[build];
