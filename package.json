@@ -64,7 +64,7 @@
     "cross-env": "^1.0.6",
     "css-loader": "^0.23.1",
     "eslint": "^1.10.3",
-    "eslint-loader": "^1.1.1",
+    "eslint-loader": "^1.2.0",
     "eslint-plugin-react": "^3.13.1",
     "glob": "^6.0.3",
     "html-webpack-plugin": "^1.7.0",
