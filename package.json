@@ -71,7 +71,7 @@
     "husky": "^0.10.2",
     "isparta": "^4.0.0",
     "minicat": "^1.0.0",
-    "nightwatch-autorun": "^1.0.2",
+    "nightwatch-autorun": "^2.0.0",
     "parallelshell": "^2.0.0",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
