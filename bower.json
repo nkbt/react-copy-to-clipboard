@@ -24,5 +24,12 @@
   "homepage": "https://github.com/nkbt/react-component-template",
   "dependencies": {
     "react": "^0.14"
-  }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
