@@ -132,6 +132,9 @@ ReactDOM.render(<App />, appRoot);
 
 ## Development and testing
 
+Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
+Should be ok with Node 4, but not guaranteed.
+
 To run example covering all `MyComponent` features, use `npm start`, which will compile `src/example/Example.js`
 
 ```bash

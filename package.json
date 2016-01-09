@@ -23,14 +23,6 @@
     "prepush": "npm run test -s && npm run test:e2e -s",
     "postversion": "git push --follow-tags"
   },
-  "engines": {
-    "node": "^5.0.0"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nkbt/react-component-template.git"
