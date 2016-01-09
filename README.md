@@ -54,8 +54,10 @@ Considering the name is `react-my-component` and it is published to NPM
 ### NPM
 
 ```sh
-npm install --save react-my-component
+npm install --save react react-my-component
 ```
+
+Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 
 ### Bower:
@@ -75,12 +77,14 @@ or in `bower.json`
 
 then include as
 ```html
+<script src="bower_components/react/react.js"></script>
 <script src="bower_components/react-my-component/build/react-my-component.js"></script>
 ```
 
 
 ### 1998 Script Tag:
 ```html
+<script src="https://npmcdn.com/react/dist/react.js"></script>
 <script src="https://npmcdn.com/react-my-component/build/react-my-component.js"></script>
 (Module exposed as `ReactMyComponent`)
 ```
