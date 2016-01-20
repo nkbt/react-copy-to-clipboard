@@ -58,7 +58,7 @@
     "eslint-loader": "^1.2.0",
     "eslint-plugin-react": "^3.15.0",
     "glob": "^6.0.4",
-    "html-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^2.7.1",
     "husky": "^0.10.2",
     "isparta": "^4.0.0",
     "json-loader": "^0.5.4",
