@@ -1,5 +1,5 @@
 import React from 'react';
-import CopyToClipboard from '..';
+import CopyToClipboard from '../CopyToClipboard';
 
 
 const App = React.createClass({
