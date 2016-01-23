@@ -8,7 +8,7 @@ module.exports = {
     browser
       .url('http://localhost:8080/')
       .waitForElementVisible('body', WAIT)
-      .assert.containsText('body', 'Component')
+      .assert.containsText('body', 'CopyToClipboard')
       .end();
   }
 };

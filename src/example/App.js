@@ -21,6 +21,8 @@ const App = React.createClass({
   render() {
     return (
       <div>
+        <h1>CopyToClipboard</h1>
+
         <input value={this.state.value} size={10} onChange={this.onChange} />&nbsp;
 
         <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
