@@ -55,7 +55,7 @@ then include as
 ```html
 <script src="https://npmcdn.com/react/dist/react.js"></script>
 <script src="https://npmcdn.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
-(Module exposed as `ReactMyComponent`)
+(Module exposed as `CopyToClipboard`)
 ```
 
 
@@ -65,7 +65,7 @@ then include as
 
 ## Codepen demo
 
-[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv)
+[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv?editors=0010)
 
 ## Usage
 ```js
