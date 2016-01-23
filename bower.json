@@ -2,10 +2,15 @@
   "name": "react-copy-to-clipboard",
   "version": "1.0.2",
   "description": "Copy-to-clipboard React component",
-  "main": "react-copy-to-clipboard.js",
+  "main": [
+    "build/react-copy-to-clipboard.js",
+    "build/react-copy-to-clipboard.js.map",
+    "build/react-copy-to-clipboard.min.js",
+    "build/react-copy-to-clipboard.min.js.map"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bower-registry/react-copy-to-clipboard.git"
+    "url": "https://github.com/nkbt/react-copy-to-clipboard.git"
   },
   "keywords": [
     "component",
@@ -20,7 +25,7 @@
   "license": "MIT",
   "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
   "dependencies": {
-    "react": "^0.13 || ^0.14"
+    "react": "^0.14"
   },
   "ignore": [
     "**/.*",

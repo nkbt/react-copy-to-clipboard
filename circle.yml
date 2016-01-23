@@ -1,14 +1,13 @@
 machine:
   node:
-    version: v0.10.40
-
-
-dependencies:
-  pre:
-    - npm update -g npm@3
+    version: v5.2.0
 
 test:
   override:
-    - $(npm bin)/eslint --debug . --format tap | $(npm bin)/tap-xunit > $CIRCLE_TEST_REPORTS/lint.xml; test ${PIPESTATUS[0]} -eq 0
-    - COVERAGE=1 karma start ./karma.conf.js --single-run --reporters coverage,junit
-    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | $(npm bin)/coveralls || true
+    - $(npm bin)/eslint --debug . --format tap | $(npm bin)/tap-xunit > ${CIRCLE_TEST_REPORTS}/lint.xml && test ${PIPESTATUS[0]} -eq 0
+    - $(npm bin)/babel-node test | $(npm bin)/tap-xunit > ${CIRCLE_TEST_REPORTS}/test.xml && test ${PIPESTATUS[0]} -eq 0
+    - $(npm bin)/babel-node $(npm bin)/isparta cover --report text --report lcov --verbose --dir ${CIRCLE_ARTIFACTS}/coverage  --include '**/!(*-test).js' test/index.js
+    - REPORT_DIR=${CIRCLE_TEST_REPORTS} LOG_DIR=${CIRCLE_ARTIFACTS} npm run test:e2e -s
+
+  post:
+    - cat ${CIRCLE_ARTIFACTS}/coverage/lcov.info | $(npm bin)/codecov

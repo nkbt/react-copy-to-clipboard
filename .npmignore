@@ -1,11 +1,12 @@
 /.*/
 /.*
-/build/
 /example/
 /reports/
 /src/example/
+/src/.*
 /test/
-/bower.json
+/test-e2e/
 /circle.yml
-/karma.conf.js
-/webpack.config.*
+/webpack.config.js
+/nightwatch.json
+/appveyor.yml

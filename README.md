@@ -2,8 +2,9 @@
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
 
-[![Circle CI](https://circleci.com/gh/nkbt/react-copy-to-clipboard.svg?style=svg)](https://circleci.com/gh/nkbt/react-copy-to-clipboard)
-[![Coverage Status](https://coveralls.io/repos/nkbt/react-copy-to-clipboard/badge.svg?branch=master)](https://coveralls.io/r/nkbt/react-copy-to-clipboard?branch=master)
+[![Circle CI](https://circleci.com/gh/nkbt/react-copy-to-clipboard.svg?style=shield)](https://circleci.com/gh/nkbt/react-copy-to-clipboard)
+[![Appveyor](https://ci.appveyor.com/api/projects/status/0b872jlqe0kvd4sx?svg=true)](https://ci.appveyor.com/project/nkbt/react-copy-to-clipboard)
+[![codecov.io](https://codecov.io/github/nkbt/react-copy-to-clipboard/coverage.svg?branch=master)](https://codecov.io/github/nkbt/react-copy-to-clipboard?branch=master)
 [![Dependency Status](https://david-dm.org/nkbt/react-copy-to-clipboard.svg)](https://david-dm.org/nkbt/react-copy-to-clipboard)
 [![devDependency Status](https://david-dm.org/nkbt/react-copy-to-clipboard/dev-status.svg)](https://david-dm.org/nkbt/react-copy-to-clipboard#info=devDependencies)
 
@@ -19,22 +20,57 @@ Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
 
 ## Installation
 
-### npm
+### NPM
 
 ```sh
-npm install --save react-copy-to-clipboard
+npm install --save react react-copy-to-clipboard
 ```
 
-### bower
+Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
+
+### Bower:
 ```sh
-bower install --save react-copy-to-clipboard
+bower install --save https://npmcdn.com/react-copy-to-clipboard/bower.zip
 ```
+
+or in `bower.json`
+
+```json
+{
+  "dependencies": {
+    "react-copy-to-clipboard": "https://npmcdn.com/react-copy-to-clipboard/bower.zip"
+  }
+}
+```
+
+then include as
+```html
+<script src="bower_components/react/react.js"></script>
+<script src="bower_components/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
+```
+
+
+### 1998 Script Tag:
+```html
+<script src="https://npmcdn.com/react/dist/react.js"></script>
+<script src="https://npmcdn.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
+(Module exposed as `ReactMyComponent`)
+```
+
+
+## Demo
+
+[http://nkbt.github.io/react-copy-to-clipboard/example](http://nkbt.github.io/react-copy-to-clipboard/example)
+
+## Codepen demo
+
+[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv)
 
 ## Usage
-
 ```js
 import React from 'react';
+import ReactDOM from 'react-dom';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 const App = React.createClass({
@@ -64,8 +100,9 @@ const App = React.createClass({
   }
 });
 
-
-React.render(<App />, document.body);
+const appRoot = document.createElement('div');
+document.body.appendChild(appRoot);
+ReactDOM.render(<App />, appRoot);
 ```
 
 ## Options
@@ -94,7 +131,10 @@ CopyToClipboard is a simple wrapping component, it does not render any tags, so 
 
 ## Development and testing
 
-To run comprehensive example covering all `InFlux` features, use `npm start`, which will compile `src/example/Example.js`
+Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
+Should be ok with Node 4, but not guaranteed.
+
+To run example covering all `CopyToClipboard` features, use `npm start`, which will compile `src/example/Example.js`
 
 ```bash
 git clone git@github.com:nkbt/react-copy-to-clipboard.git
@@ -105,17 +145,6 @@ npm start
 # then
 open http://localhost:8080
 ```
-
-
-## Demo
-
-[http://nkbt.github.io/react-copy-to-clipboard/example](http://nkbt.github.io/react-copy-to-clipboard/example)
-
-
-## Codepen demo
-
-[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv)
-
 
 ## Tests
 
