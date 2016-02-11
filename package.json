@@ -44,7 +44,7 @@
     "react": "^0.14"
   },
   "dependencies": {
-    "copy-to-clipboard": "^1.0.4"
+    "copy-to-clipboard": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
