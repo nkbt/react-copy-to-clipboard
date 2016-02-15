@@ -83,7 +83,7 @@
     "consistent-return": 2, // require return statements to either always or never specify values
     "curly": 2, // specify curly brace conventions for all control statements
     "default-case": 2, // require default case in switch statements
-    "dot-location": 2, // enforces consistent newlines before or after dots
+    "dot-location": [2, "property"], // enforces consistent newlines before or after dots
     "dot-notation": 2, // encourages use of dot notation whenever possible
     "eqeqeq": 2, // require the use of === and !==
     "guard-for-in": 2, // make sure for-in loops have an if statement
@@ -215,7 +215,7 @@
     "new-cap": [2, {"newIsCap": true, "capIsNew": false}], // require a capital letter for constructors
     "new-parens": 2, // disallow the omission of parentheses when invoking a constructor with no arguments
     "newline-after-var": [2, "always"], // require or disallow an empty newline after variable declarations
-    "newline-per-chained-call": [2, {"ignoreChainWithDepth": 3}], // enforce newline after each call when chaining the calls
+    "newline-per-chained-call": 0, // enforce newline after each call when chaining the calls
     "no-array-constructor": 2, // disallow use of the Array constructor
     "no-bitwise": 2, // disallow use of bitwise operators
     "no-continue": 2, // disallow use of the continue statement
@@ -299,7 +299,7 @@
     "react/no-set-state": 0, // Prevent usage of setState
     "react/no-string-refs": 2, // Prevent using string references in ref attribute.
     "react/no-unknown-property": 2, // Prevent usage of unknown DOM property (fixable)
-    "react/prefer-es6-class": 2, // Enforce ES5 or ES6 class for React Components
+    "react/prefer-es6-class": 0, // Enforce ES5 or ES6 class for React Components
     "react/prop-types": 2, // Prevent missing props validation in a React component definition
     "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
     "react/require-extension": [1, {"extensions": [".js"]}], // Restrict file extensions that may be required
@@ -325,7 +325,7 @@
     "react/jsx-pascal-case": 2, // Enforce PascalCase for user-defined JSX components
     "react/jsx-sort-prop-types": 0, // Enforce propTypes declarations alphabetical sorting
     "react/jsx-sort-props": 2, // Enforce props alphabetical sorting
-    "react/jsx-space-before-closing": 2, // Validate spacing before closing bracket in JSX (fixable)
+    "react/jsx-space-before-closing": [2, "always"], // Validate spacing before closing bracket in JSX (fixable)
     "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
     "react/jsx-uses-vars": 2 // Prevent variables used in JSX to be incorrectly marked as unused
   }
