@@ -59,7 +59,7 @@
     "eslint-plugin-react": "^4.0.0-rc.1",
     "glob": "^7.0.0",
     "html-webpack-plugin": "^2.8.1",
-    "husky": "^0.10.2",
+    "husky": "^0.11.0",
     "isparta": "^4.0.0",
     "json-loader": "^0.5.4",
     "nightwatch-autorun": "^2.1.3",
