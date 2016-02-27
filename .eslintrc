@@ -159,6 +159,7 @@
     "no-catch-shadow": 2, // disallow the catch clause parameter name being the same as a variable in the outer scope
     "no-delete-var": 2, // disallow deletion of variables (recommended)
     "no-label-var": 2, // disallow labels that share a name with a variable
+    "no-restricted-globals": 0, // restrict usage of specified global variables
     "no-shadow": 2, // disallow declaration of variables already declared in the outer scope
     "no-shadow-restricted-names": 2, // disallow shadowing of names such as arguments
     "no-undef": 2, // disallow use of undeclared variables unless mentioned in a /*global */ block (recommended)
