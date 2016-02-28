@@ -301,6 +301,7 @@
     "react/no-string-refs": 2, // Prevent using string references in ref attribute.
     "react/no-unknown-property": 2, // Prevent usage of unknown DOM property (fixable)
     "react/prefer-es6-class": 0, // Enforce ES5 or ES6 class for React Components
+    "react/prefer-stateless-function": 2, // Enforce stateless React Components to be written as a pure function
     "react/prop-types": 2, // Prevent missing props validation in a React component definition
     "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
     "react/require-extension": [1, {"extensions": [".js"]}], // Restrict file extensions that may be required
