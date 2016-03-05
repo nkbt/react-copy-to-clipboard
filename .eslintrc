@@ -109,7 +109,7 @@
     "no-labels": 2, // disallow use of labeled statements
     "no-lone-blocks": 2, // disallow unnecessary nested blocks
     "no-loop-func": 2, // disallow creation of functions within loops
-    "no-magic-numbers": 2, // disallow the use of magic numbers
+    "no-magic-numbers": 0, // disallow the use of magic numbers
     "no-multi-spaces": 2, // disallow use of multiple spaces (fixable)
     "no-multi-str": 2, // disallow use of multiline strings
     "no-native-reassign": 2, // disallow reassignments of native objects
@@ -317,9 +317,9 @@
     "react/jsx-equals-spacing": 2, // Enforce or disallow spaces around equal signs in JSX attributes
     "react/jsx-handler-names": 2, // Enforce event handler naming conventions in JSX
     "react/jsx-indent-props": [2, 2], // Validate props indentation in JSX
-    "react/jsx-indent": 2, // Validate JSX indentation
+    "react/jsx-indent": [2, 2], // Validate JSX indentation
     "react/jsx-key": 2, // Validate JSX has key prop when in array or iterator
-    "react/jsx-max-props-per-line": 2, // Limit maximum of props on a single line in JSX
+    "react/jsx-max-props-per-line": [2, {"maximum": 4}], // Limit maximum of props on a single line in JSX
     "react/jsx-no-bind": [2, {"allowArrowFunctions": true}], // Prevent usage of .bind() and arrow functions in JSX props
     "react/jsx-no-duplicate-props": [2, {"ignoreCase": true}], // Prevent duplicate props in JSX
     "react/jsx-no-literals": 0, // Prevent usage of unwrapped JSX strings
