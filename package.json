@@ -20,7 +20,7 @@
     "test:e2e": "cross-env NODE_ENV=development nightwatch-autorun",
     "lint": "eslint --cache .",
     "precommit": "npm run lint -s",
-    "prepush": "npm run test -s && npm run test:e2e -s",
+    "prepush": "npm run test -s",
     "postversion": "git push --follow-tags"
   },
   "repository": {
