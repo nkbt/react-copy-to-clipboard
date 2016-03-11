@@ -1,5 +1,3 @@
-/* eslint no-process-env:0 */
-
 'use strict';
 
 
@@ -9,9 +7,17 @@ const path = require('path');
 
 
 const loaders = [
-  {test: /\.css$/, loader: 'css?modules', include: [path.resolve('src/example')]},
-  {test: /\.json$/, loader: 'json', include: [path.resolve('src/example')]},
-  {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
+  {
+    test: /\.css$/,
+    loader: 'style!css?sourceMap&modules&localIdentName=[path][name]---[local]',
+    include: [path.resolve('src/example')]
+  },
+  {test: /\.json$/, loader: 'json'},
+  {
+    test: /\.js$/,
+    loader: 'babel',
+    include: [path.resolve('src')]
+  }
 ];
 
 
@@ -27,7 +33,7 @@ const stats = {colors: true};
 
 
 const development = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: '#source-map',
 
   entry: [
     './src/example/Example.js',
@@ -61,7 +67,7 @@ const development = {
 
 
 const ghPages = {
-  devtool: 'source-map',
+  devtool: '#source-map',
   entry: './src/example/Example.js',
   output: {filename: 'bundle.js', path: path.resolve('example')},
   plugins: [new HtmlWebpackPlugin(), definePlugin],
@@ -72,12 +78,12 @@ const ghPages = {
 
 
 const dist = {
-  devtool: 'source-map',
+  devtool: '#source-map',
   entry: './src/index.js',
   output: {
     filename: `${require('./package.json').name}.js`,
     path: path.resolve('build'),
-    library: 'Component',
+    library: 'ReactComponentTemplate',
     libraryTarget: 'umd'
   },
   plugins: [definePlugin],
@@ -91,12 +97,12 @@ const dist = {
 
 
 const min = {
-  devtool: 'source-map',
+  devtool: '#source-map',
   entry: './src/index.js',
   output: {
     filename: `${require('./package.json').name}.min.js`,
     path: path.resolve('build'),
-    library: 'Component',
+    library: 'ReactComponentTemplate',
     libraryTarget: 'umd'
   },
   plugins: [
