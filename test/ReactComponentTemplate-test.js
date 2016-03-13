@@ -1,5 +1,5 @@
 import test from 'tape';
-import ReactComponentTemplate from '../src/Component';
+import ReactComponentTemplate from '../src/ReactComponentTemplate';
 
 
 test('ReactComponentTemplate', t => {

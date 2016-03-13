@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactComponentTemplate from '../Component';
+import ReactComponentTemplate from '../ReactComponentTemplate';
 import css from './App.css';
 
 
