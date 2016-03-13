@@ -49,12 +49,12 @@ Developing and publishing multiple React components requires a lot of work to ke
 
 ## Installation
 
-Considering the name is `react-my-component` and it is published to NPM
+Considering the name is `react-component-template` and it is published to NPM
 
 ### NPM
 
 ```sh
-npm install --save react react-my-component
+npm install --save react react-component-template
 ```
 
 Don't forget to manually install peer dependencies (`react`) if you use npm@3.
@@ -62,7 +62,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 ### Bower:
 ```sh
-bower install --save https://npmcdn.com/react-my-component/bower.zip
+bower install --save https://npmcdn.com/react-component-template/bower.zip
 ```
 
 or in `bower.json`
@@ -70,7 +70,7 @@ or in `bower.json`
 ```json
 {
   "dependencies": {
-    "react-my-component": "https://npmcdn.com/react-my-component/bower.zip"
+    "react-component-template": "https://npmcdn.com/react-component-template/bower.zip"
   }
 }
 ```
@@ -78,15 +78,15 @@ or in `bower.json`
 then include as
 ```html
 <script src="bower_components/react/react.js"></script>
-<script src="bower_components/react-my-component/build/react-my-component.js"></script>
+<script src="bower_components/react-component-template/build/react-component-template.js"></script>
 ```
 
 
 ### 1998 Script Tag:
 ```html
 <script src="https://npmcdn.com/react/dist/react.js"></script>
-<script src="https://npmcdn.com/react-my-component/build/react-my-component.js"></script>
-(Module exposed as `ReactMyComponent`)
+<script src="https://npmcdn.com/react-component-template/build/react-component-template.js"></script>
+(Module exposed as `ReactComponentTemplate`)
 ```
 
 
@@ -97,7 +97,7 @@ Publishing on `gh-pages`:
 - allow `/example` in `.gitignore`
 - commit and push to `gh-pages`
 
-[http://nkbt.github.io/react-my-component/example](http://nkbt.github.io/react-my-component/example)
+[http://nkbt.github.io/react-component-template/example](http://nkbt.github.io/react-component-template/example)
 
 ## Codepen demo
 
@@ -110,13 +110,13 @@ Publishing on `gh-pages`:
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyComponent from 'react-my-component';
+import ReactComponentTemplate from 'react-component-template';
 
 const App = React.createClass({
   render() {
     return (
       <div>
-        <MyComponent some="prop" />
+        <ReactComponentTemplate some="prop" />
       </div>
     );
   }
@@ -140,11 +140,11 @@ ReactDOM.render(<App />, appRoot);
 Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
 Should be ok with Node 4, but not guaranteed.
 
-To run example covering all `MyComponent` features, use `npm start`, which will compile `src/example/Example.js`
+To run example covering all `ReactComponentTemplate` features, use `npm start`, which will compile `src/example/Example.js`
 
 ```bash
-git clone git@github.com:nkbt/react-my-component.git
-cd react-my-component
+git clone git@github.com:nkbt/react-component-template.git
+cd react-component-template
 npm install
 npm start
 

@@ -1,14 +1,12 @@
 'use strict';
 
 
-const WAIT = 1000;
-
 module.exports = {
-  'Test for component appears on the screen'(browser) {
+  'Smoketest'(browser) {
     browser
-      .url('http://localhost:8080/')
-      .waitForElementVisible('body', WAIT)
-      .assert.containsText('body', 'Component')
+      .url(`${browser.launchUrl}/`)
+      .waitForElementVisible('body', 1000)
+      .assert.containsText('body', require('../package.json').name)
       .end();
   }
 };

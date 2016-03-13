@@ -1,7 +1,12 @@
 import React from 'react';
+import {name} from '../package.json';
 
 
-const Component = () => <div>Component</div>;
+const ReactComponentTemplate = React.createClass({
+  render() {
+    return <div>{name}</div>;
+  }
+});
 
 
-export default Component;
+export default ReactComponentTemplate;
