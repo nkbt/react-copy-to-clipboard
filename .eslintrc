@@ -119,7 +119,7 @@
     "no-octal": 2, // disallow use of octal literals (recommended)
     "no-octal-escape": 2, // disallow use of octal escape sequences in string literals, such as var foo = "Copyright \251";
     "no-param-reassign": 2, // disallow reassignment of function parameters
-    "no-process-env": 2, // disallow use of process.env
+    "no-process-env": 0, // disallow use of process.env
     "no-proto": 2, // disallow usage of __proto__ property
     "no-redeclare": 2, // disallow declaring the same variable more than once (recommended)
     "no-return-assign": 2, // disallow use of assignment in return statement
@@ -301,7 +301,7 @@
     "react/no-string-refs": 2, // Prevent using string references in ref attribute.
     "react/no-unknown-property": 2, // Prevent usage of unknown DOM property (fixable)
     "react/prefer-es6-class": 0, // Enforce ES5 or ES6 class for React Components
-    "react/prefer-stateless-function": 2, // Enforce stateless React Components to be written as a pure function
+    "react/prefer-stateless-function": 0, // Enforce stateless React Components to be written as a pure function
     "react/prop-types": 2, // Prevent missing props validation in a React component definition
     "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
     "react/require-extension": [1, {"extensions": [".js"]}], // Restrict file extensions that may be required
