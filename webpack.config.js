@@ -37,14 +37,12 @@ const development = {
 
   entry: [
     './src/example/Example.js',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server'
+    'webpack-dev-server/client?http://localhost:8080'
   ],
   output: {filename: 'bundle.js', path: path.resolve('example')},
   plugins: [
     new HtmlWebpackPlugin(),
-    definePlugin,
-    new webpack.HotModuleReplacementPlugin()
+    definePlugin
   ],
   module: {
     loaders,
@@ -55,7 +53,6 @@ const development = {
   resolve,
   stats,
   devServer: {
-    hot: true,
     historyApiFallback: true,
     stats: {
       // Do not show list of hundreds of files included in a bundle
