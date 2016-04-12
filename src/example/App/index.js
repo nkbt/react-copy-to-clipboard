@@ -1,5 +1,7 @@
 import React from 'react';
-import CopyToClipboard from '../CopyToClipboard';
+import CopyToClipboard from '../../CopyToClipboard';
+import {name} from '../../../package.json';
+import css from './App.css';
 
 
 const App = React.createClass({
@@ -20,8 +22,8 @@ const App = React.createClass({
 
   render() {
     return (
-      <div>
-        <h1>CopyToClipboard</h1>
+      <div className={css.app}>
+        <h1>{name}</h1>
 
         <input value={this.state.value} size={10} onChange={this.onChange} />&nbsp;
 
