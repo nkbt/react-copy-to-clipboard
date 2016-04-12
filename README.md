@@ -1,12 +1,12 @@
-# react-copy-to-clipboard
+# react-copy-to-clipboard [![npm](https://img.shields.io/npm/v/react-copy-to-clipboard.svg?style=flat-square)](https://www.npmjs.com/package/react-copy-to-clipboard)
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
+[![Gitter](https://img.shields.io/gitter/room/nkbt/help.svg?style=flat-square)](https://gitter.im/nkbt/help)
 
-[![Circle CI](https://circleci.com/gh/nkbt/react-copy-to-clipboard.svg?style=shield)](https://circleci.com/gh/nkbt/react-copy-to-clipboard)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/0b872jlqe0kvd4sx?svg=true)](https://ci.appveyor.com/project/nkbt/react-copy-to-clipboard)
-[![codecov.io](https://codecov.io/github/nkbt/react-copy-to-clipboard/coverage.svg?branch=master)](https://codecov.io/github/nkbt/react-copy-to-clipboard?branch=master)
-[![Dependency Status](https://david-dm.org/nkbt/react-copy-to-clipboard.svg)](https://david-dm.org/nkbt/react-copy-to-clipboard)
-[![devDependency Status](https://david-dm.org/nkbt/react-copy-to-clipboard/dev-status.svg)](https://david-dm.org/nkbt/react-copy-to-clipboard#info=devDependencies)
+[![CircleCI](https://img.shields.io/circleci/project/nkbt/react-copy-to-clipboard.svg?style=flat-square&label=nix-build)](https://circleci.com/gh/nkbt/react-copy-to-clipboard)
+[![AppVeyor](https://img.shields.io/appveyor/ci/nkbt/react-copy-to-clipboard.svg?style=flat-square&label=win-build)](https://ci.appveyor.com/project/nkbt/react-copy-to-clipboard)
+[![Coverage](https://img.shields.io/codecov/c/github/nkbt/react-copy-to-clipboard.svg?style=flat-square)](https://codecov.io/github/nkbt/react-copy-to-clipboard?branch=master)
+[![Dependencies](https://img.shields.io/david/nkbt/react-copy-to-clipboard.svg?style=flat-square)](https://david-dm.org/nkbt/react-copy-to-clipboard)
+[![Dev Dependencies](https://img.shields.io/david/dev/nkbt/react-copy-to-clipboard.svg?style=flat-square)](https://david-dm.org/nkbt/react-copy-to-clipboard#info=devDependencies)
 
 Copy to clipboard React component
 

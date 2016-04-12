@@ -7,9 +7,17 @@ const path = require('path');
 
 
 const loaders = [
-  {test: /\.css$/, loader: 'css?modules', include: [path.resolve('src/example')]},
-  {test: /\.json$/, loader: 'json', include: [path.resolve('src/example')]},
-  {test: /\.js$/, loader: 'babel', include: [path.resolve('src')]}
+  {
+    test: /\.css$/,
+    loader: 'style!css?sourceMap&modules&localIdentName=[path][name]---[local]',
+    include: [path.resolve('src/example')]
+  },
+  {test: /\.json$/, loader: 'json'},
+  {
+    test: /\.js$/,
+    loader: 'babel',
+    include: [path.resolve('src')]
+  }
 ];
 
 
@@ -25,18 +33,16 @@ const stats = {colors: true};
 
 
 const development = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: '#source-map',
 
   entry: [
     './src/example/Example.js',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server'
+    'webpack-dev-server/client?http://localhost:8080'
   ],
   output: {filename: 'bundle.js', path: path.resolve('example')},
   plugins: [
     new HtmlWebpackPlugin(),
-    definePlugin,
-    new webpack.HotModuleReplacementPlugin()
+    definePlugin
   ],
   module: {
     loaders,
@@ -47,7 +53,6 @@ const development = {
   resolve,
   stats,
   devServer: {
-    hot: true,
     historyApiFallback: true,
     stats: {
       // Do not show list of hundreds of files included in a bundle
@@ -59,7 +64,7 @@ const development = {
 
 
 const ghPages = {
-  devtool: 'source-map',
+  devtool: '#source-map',
   entry: './src/example/Example.js',
   output: {filename: 'bundle.js', path: path.resolve('example')},
   plugins: [new HtmlWebpackPlugin(), definePlugin],
@@ -70,7 +75,7 @@ const ghPages = {
 
 
 const dist = {
-  devtool: 'source-map',
+  devtool: '#source-map',
   entry: './src/index.js',
   output: {
     filename: `${require('./package.json').name}.js`,
@@ -89,7 +94,7 @@ const dist = {
 
 
 const min = {
-  devtool: 'source-map',
+  devtool: '#source-map',
   entry: './src/index.js',
   output: {
     filename: `${require('./package.json').name}.min.js`,
