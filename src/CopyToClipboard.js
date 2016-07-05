@@ -1,12 +1,6 @@
 import React from 'react';
 import copy from 'copy-to-clipboard';
 
-const onClick = (text, onCopy) => () => {
-  copy(text);
-  if (onCopy) {
-    onCopy(text);
-  }
-};
 
 const CopyToClipboard = React.createClass({
   propTypes: {
@@ -16,14 +10,32 @@ const CopyToClipboard = React.createClass({
   },
 
 
-  render() {
-    const {text, onCopy, children, ...props} = this.props;
+  onClick(event) {
+    const {text, onCopy, children} = this.props;
     const elem = React.Children.only(children);
 
-    return React.cloneElement(elem, {
-      ...props,
-      onClick: onClick(text, onCopy)
-    });
+    copy(text);
+    if (onCopy) {
+      onCopy(text);
+    }
+
+    // Bypass onClick if it was present
+    if (elem && elem.props && typeof elem.props.onClick === 'function') {
+      elem.props.onClick(event);
+    }
+  },
+
+
+  render() {
+    const {
+      text: _text,
+      onCopy: _onCopy,
+      children,
+      ...props
+    } = this.props;
+    const elem = React.Children.only(children);
+
+    return React.cloneElement(elem, {...props, onClick: this.onClick});
   }
 });
 

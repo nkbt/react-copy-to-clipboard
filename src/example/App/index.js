@@ -20,6 +20,11 @@ const App = React.createClass({
   },
 
 
+  onClick({target: {innerHTML}}) {
+    console.log(`Clicked on "${innerHTML}"!`); // eslint-disable-line
+  },
+
+
   render() {
     return (
       <div className={css.app}>
@@ -33,6 +38,10 @@ const App = React.createClass({
 
         <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
           <button>Copy to clipboard with button</button>
+        </CopyToClipboard>&nbsp;
+
+        <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
+          <button onClick={this.onClick}>Copy to clipboard with onClick prop</button>
         </CopyToClipboard>&nbsp;
 
 
