@@ -6,13 +6,13 @@ const CopyToClipboard = React.createClass({
   propTypes: {
     text: React.PropTypes.string.isRequired,
     children: React.PropTypes.element.isRequired,
-    onClick: React.PropTypes.func,
     onCopy: React.PropTypes.func
   },
 
 
-  onClick(e) {
-    const {text, onCopy, onClick} = this.props;
+  onClick(event) {
+    const {text, onCopy, children} = this.props;
+    const elem = React.Children.only(children);
 
     copy(text);
     if (onCopy) {
@@ -20,8 +20,8 @@ const CopyToClipboard = React.createClass({
     }
 
     // Bypass onClick if it was present
-    if (onClick) {
-      onClick(e);
+    if (elem && elem.props && typeof elem.props.onClick === 'function') {
+      elem.props.onClick(event);
     }
   },
 
@@ -30,7 +30,6 @@ const CopyToClipboard = React.createClass({
     const {
       text: _text,
       onCopy: _onCopy,
-      onClick: _onClick,
       children,
       ...props
     } = this.props;
