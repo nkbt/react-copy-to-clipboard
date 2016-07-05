@@ -6,15 +6,19 @@ const CopyToClipboard = React.createClass({
   propTypes: {
     text: React.PropTypes.string.isRequired,
     children: React.PropTypes.element.isRequired,
-    onCopy: React.PropTypes.func
+    onCopy: React.PropTypes.func,
+    options: React.PropTypes.shape({
+      debug: React.PropTypes.bool,
+      message: React.PropTypes.string
+    })
   },
 
 
   onClick(event) {
-    const {text, onCopy, children} = this.props;
+    const {text, onCopy, children, options} = this.props;
     const elem = React.Children.only(children);
 
-    copy(text);
+    copy(text, options);
     if (onCopy) {
       onCopy(text);
     }
@@ -30,6 +34,7 @@ const CopyToClipboard = React.createClass({
     const {
       text: _text,
       onCopy: _onCopy,
+      options: _options,
       children,
       ...props
     } = this.props;
