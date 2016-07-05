@@ -40,7 +40,7 @@ const App = React.createClass({
           <button>Copy to clipboard with button</button>
         </CopyToClipboard>&nbsp;
 
-        <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
+        <CopyToClipboard text={this.state.value} onCopy={this.onCopy} options={{message: 'Whoa!'}}>
           <button onClick={this.onClick}>Copy to clipboard with onClick prop</button>
         </CopyToClipboard>&nbsp;
 

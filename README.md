@@ -10,7 +10,7 @@
 
 Copy to clipboard React component
 
-Based on [copy-to-clipboard](https://www.npmjs.com/package/copy-to-clipboard)
+Based on [copy-to-clipboard](https://npm.im/copy-to-clipboard)
 
 > Would try to use execCommand with fallback to IE specific clipboardData interface and finally, fallback to simple prompt with proper text content & 'Copy to clipboard: Ctrl+C, Enter'
 
@@ -117,6 +117,12 @@ Text to be copied to clipboard
 
 Optional callback, will be called when text is copied
 
+
+#### `options`: React.PropTypes.shape({debug: bool, message: string})
+
+Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options.
+
+See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
 #### `children`: React.PropTypes.node.isRequired
 
