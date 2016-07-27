@@ -1,5 +1,5 @@
 import test from 'tape';
-import CopyToClipboard from '../src/CopyToClipboard';
+import {CopyToClipboard} from '../src/Component';
 
 test('CopyToClipboard', t => {
   t.ok(CopyToClipboard instanceof Function, 'should be function');
