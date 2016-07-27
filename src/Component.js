@@ -2,7 +2,7 @@ import React from 'react';
 import copy from 'copy-to-clipboard';
 
 
-const CopyToClipboard = React.createClass({
+export const CopyToClipboard = React.createClass({
   propTypes: {
     text: React.PropTypes.string.isRequired,
     children: React.PropTypes.element.isRequired,
@@ -43,6 +43,3 @@ const CopyToClipboard = React.createClass({
     return React.cloneElement(elem, {...props, onClick: this.onClick});
   }
 });
-
-
-export default CopyToClipboard;

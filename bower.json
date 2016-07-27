@@ -20,12 +20,12 @@
     "clipboard"
   ],
   "authors": [
-    "Nik Butenko <nik@butenko.me> (http://butenko.me/)"
+    "Nik Butenko <nik@butenko.me>"
   ],
   "license": "MIT",
   "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
   "dependencies": {
-    "react": "^0.14"
+    "react": "^0.14 || ^15"
   },
   "ignore": [
     "**/.*",

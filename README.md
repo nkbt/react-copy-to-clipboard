@@ -61,7 +61,7 @@ then include as
 
 ## Demo
 
-[http://nkbt.github.io/react-copy-to-clipboard/example](http://nkbt.github.io/react-copy-to-clipboard/example)
+[http://nkbt.github.io/react-copy-to-clipboard](http://nkbt.github.io/react-copy-to-clipboard)
 
 ## Codepen demo
 
@@ -134,19 +134,17 @@ CopyToClipboard is a simple wrapping component, it does not render any tags, so 
 </CopyToClipboard>
 ```
 
-
 ## Development and testing
 
-Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
-Should be ok with Node 4, but not guaranteed.
+Currently is being developed and tested with the latest stable `Node 6` on `OSX` and `Windows`.
 
-To run example covering all `CopyToClipboard` features, use `npm start`, which will compile `src/example/Example.js`
+To run example covering all `CopyToClipboard` features, use `npm start dev`, which will compile `src/example/Example.js`
 
 ```bash
 git clone git@github.com:nkbt/react-copy-to-clipboard.git
 cd react-copy-to-clipboard
 npm install
-npm start
+npm start dev
 
 # then
 open http://localhost:8080
@@ -155,13 +153,14 @@ open http://localhost:8080
 ## Tests
 
 ```bash
-npm test
-
-# to run tests in watch mode for development
-npm run test:dev
+# to run tests
+npm start test
 
 # to generate test coverage (./reports/coverage)
-npm run test:cov
+npm start test.cov
+
+# to run end-to-end tests
+npm start test.e2e
 ```
 
 ## License
