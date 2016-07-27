@@ -1,5 +1,5 @@
 import React from 'react';
-import CopyToClipboard from '../../CopyToClipboard';
+import CopyToClipboard from '../..';
 import {name} from '../../../package.json';
 import css from './App.css';
 

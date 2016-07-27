@@ -3,25 +3,16 @@
   "version": "4.2.1",
   "description": "Copy-to-clipboard React component",
   "main": "lib/index.js",
+  "config": {
+    "component": "CopyToClipboard"
+  },
   "scripts": {
-    "pregh-pages": "git fetch origin",
-    "gh-pages": "git checkout gh-pages && git rebase origin/master --force-rebase && npm run build && git add . && git commit --amend --no-edit && git push --force && git checkout master",
-    "build": "parallelshell -w \"npm run build:lib -s\" \"npm run build:ghPages -s\" \"npm run build:dist -s\" \"npm run build:min -s\"",
-    "prebuild": "rimraf lib example build",
-    "build:lib": "cross-env NODE_ENV=production babel src --out-dir lib --source-maps --ignore src/example",
-    "build:ghPages": "cross-env NODE_ENV=production BUILD=ghPages webpack",
-    "build:dist": "cross-env NODE_ENV=production BUILD=dist webpack",
-    "build:min": "cross-env NODE_ENV=production BUILD=min webpack",
-    "prepublish": "parallelshell -w \"npm run build:lib -s\" \"npm run build:dist -s\" \"npm run build:min -s\"",
-    "start": "cross-env NODE_ENV=development webpack-dev-server",
-    "test": "cross-env NODE_ENV=test babel-node test",
-    "test:dev": "cross-env NODE_ENV=test babel-node test | tap-nyan",
-    "test:cov": "cross-env NODE_ENV=test babel-node node_modules/isparta/bin/isparta cover --report text --report html --report lcov --dir reports/coverage test",
-    "test:e2e": "cross-env NODE_ENV=development nightwatch-autorun",
-    "lint": "eslint --cache .",
-    "precommit": "npm run lint -s",
-    "prepush": "npm run test -s",
-    "postversion": "git push --follow-tags"
+    "start": "react-component-template",
+    "test": "npm start test",
+    "precommit": "npm start precommit",
+    "prepush": "npm start prepush",
+    "postversion": "npm start postversion",
+    "prepublish": "npm start prepublish"
   },
   "repository": {
     "type": "git",
@@ -34,7 +25,7 @@
     "copy to clipboard",
     "clipboard"
   ],
-  "author": "Nik Butenko <nik@butenko.me> (http://butenko.me/)",
+  "author": "Nik Butenko <nik@butenko.me>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nkbt/react-copy-to-clipboard/issues"
@@ -47,35 +38,6 @@
     "copy-to-clipboard": "^3"
   },
   "devDependencies": {
-    "babel-cli": "6.11.4",
-    "babel-core": "6.10.4",
-    "babel-eslint": "6.1.2",
-    "babel-loader": "6.2.4",
-    "babel-plugin-transform-object-rest-spread": "6.8.0",
-    "babel-preset-es2015": "6.9.0",
-    "babel-preset-react": "6.11.1",
-    "codecov.io": "0.1.6",
-    "cross-env": "2.0.0",
-    "css-loader": "0.23.1",
-    "eslint": "3.1.1",
-    "eslint-loader": "1.4.1",
-    "eslint-plugin-react": "5.2.2",
-    "glob": "7.0.5",
-    "html-webpack-plugin": "2.22.0",
-    "husky": "0.11.6",
-    "isparta": "4.0.0",
-    "json-loader": "0.5.4",
-    "nightwatch-autorun": "3.0.0",
-    "parallelshell": "2.0.0",
-    "react-dom": "15.2.1",
-    "react": "15.2.1",
-    "rimraf": "2.5.3",
-    "sinon": "1.17.5",
-    "style-loader": "0.13.1",
-    "tap-nyan": "0.0.2",
-    "tap-xunit": "1.4.0",
-    "tape": "4.6.0",
-    "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "react-component-template": "0.1.5"
   }
 }
