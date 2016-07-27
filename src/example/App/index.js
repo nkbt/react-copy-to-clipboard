@@ -30,17 +30,17 @@ const App = React.createClass({
       <div className={css.app}>
         <h1>{name}</h1>
 
-        <input value={this.state.value} size={10} onChange={this.onChange} />&nbsp;
+        <input onChange={this.onChange} size={10} value={this.state.value} />&nbsp;
 
-        <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
+        <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
           <span>Copy to clipboard with span</span>
         </CopyToClipboard>&nbsp;
 
-        <CopyToClipboard text={this.state.value} onCopy={this.onCopy}>
+        <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
           <button>Copy to clipboard with button</button>
         </CopyToClipboard>&nbsp;
 
-        <CopyToClipboard text={this.state.value} onCopy={this.onCopy} options={{message: 'Whoa!'}}>
+        <CopyToClipboard onCopy={this.onCopy} options={{message: 'Whoa!'}} text={this.state.value}>
           <button onClick={this.onClick}>Copy to clipboard with onClick prop</button>
         </CopyToClipboard>&nbsp;
 
@@ -49,7 +49,7 @@ const App = React.createClass({
 
         <br />
 
-        <textarea style={{marginTop: '1em'}} cols="22" rows="3" />
+        <textarea cols="22" rows="3" style={{marginTop: '1em'}} />
 
       </div>
     );
