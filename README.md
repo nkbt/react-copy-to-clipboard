@@ -31,7 +31,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 ### Bower:
 ```sh
-bower install --save https://npmcdn.com/react-copy-to-clipboard/bower.zip
+bower install --save https://unpkg.com/react-copy-to-clipboard/bower.zip
 ```
 
 or in `bower.json`
@@ -39,7 +39,7 @@ or in `bower.json`
 ```json
 {
   "dependencies": {
-    "react-copy-to-clipboard": "https://npmcdn.com/react-copy-to-clipboard/bower.zip"
+    "react-copy-to-clipboard": "https://unpkg.com/react-copy-to-clipboard/bower.zip"
   }
 }
 ```
@@ -53,8 +53,8 @@ then include as
 
 ### 1998 Script Tag:
 ```html
-<script src="https://npmcdn.com/react/dist/react.js"></script>
-<script src="https://npmcdn.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
+<script src="https://unpkg.com/react/dist/react.js"></script>
+<script src="https://unpkg.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
 (Module exposed as `CopyToClipboard`)
 ```
 
