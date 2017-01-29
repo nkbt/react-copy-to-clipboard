@@ -115,7 +115,8 @@ Text to be copied to clipboard
 
 #### `onCopy`: React.PropTypes.func
 
-Optional callback, will be called when text is copied
+Optional callback, will be called when text is copied.
+`callback(text:string, didCopy: boolean)`. where `text` is the text that was passed in and `didCopy` is the result value of copy-to-clipboard: `true` if no additional keystrokes were required from user (so, `execCommand`, IE's `clipboardData` worked) or `false`.
 
 
 #### `options`: React.PropTypes.shape({debug: bool, message: string})
