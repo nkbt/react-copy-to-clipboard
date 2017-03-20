@@ -117,6 +117,13 @@ Text to be copied to clipboard
 
 Optional callback, will be called when text is copied
 
+#### `onSuccess`: React.PropTypes.func
+
+Optional callback, will be called when text is successfully copied
+
+#### `onFail`: React.PropTypes.func
+
+Optional callback, will be called when text is unsuccessful copied
 
 #### `options`: React.PropTypes.shape({debug: bool, message: string})
 
