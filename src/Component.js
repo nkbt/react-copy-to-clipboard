@@ -7,8 +7,6 @@ export const CopyToClipboard = React.createClass({
     text: React.PropTypes.string.isRequired,
     children: React.PropTypes.element.isRequired,
     onCopy: React.PropTypes.func,
-    onSuccess: React.PropTypes.func,
-    onFail: React.PropTypes.func,
     options: React.PropTypes.shape({
       debug: React.PropTypes.bool,
       message: React.PropTypes.string
@@ -20,8 +18,6 @@ export const CopyToClipboard = React.createClass({
     const {
       text,
       onCopy,
-      onSuccess,
-      onFail,
       children,
       options
     } = this.props;
@@ -31,13 +27,7 @@ export const CopyToClipboard = React.createClass({
     const result = copy(text, options);
 
     if (onCopy) {
-      onCopy(text);
-    }
-    if (onSuccess && result) {
-      onSuccess(text);
-    }
-    if (onFail && !result) {
-      onFail(text);
+      onCopy(text, result);
     }
 
     // Bypass onClick if it was present
