@@ -15,12 +15,19 @@ export const CopyToClipboard = React.createClass({
 
 
   onClick(event) {
-    const {text, onCopy, children, options} = this.props;
+    const {
+      text,
+      onCopy,
+      children,
+      options
+    } = this.props;
+
     const elem = React.Children.only(children);
 
-    copy(text, options);
+    const result = copy(text, options);
+
     if (onCopy) {
-      onCopy(text);
+      onCopy(text, result);
     }
 
     // Bypass onClick if it was present
