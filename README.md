@@ -117,6 +117,10 @@ Text to be copied to clipboard
 
 Optional callback, will be called when text is copied
 
+```
+onCopy(text, result)
+```
+`result (bool)`: Returns `true` if cope successed, else `false`.
 
 
 #### `options`: React.PropTypes.shape({debug: bool, message: string})
