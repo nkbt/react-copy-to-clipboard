@@ -1,15 +1,17 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
 import copy from 'copy-to-clipboard';
 
 
-export const CopyToClipboard = React.createClass({
+export const CopyToClipboard = createReactClass({
   propTypes: {
-    text: React.PropTypes.string.isRequired,
-    children: React.PropTypes.element.isRequired,
-    onCopy: React.PropTypes.func,
-    options: React.PropTypes.shape({
-      debug: React.PropTypes.bool,
-      message: React.PropTypes.string
+    text: PropTypes.string.isRequired,
+    children: PropTypes.element.isRequired,
+    onCopy: PropTypes.func,
+    options: PropTypes.shape({
+      debug: PropTypes.bool,
+      message: PropTypes.string
     })
   },
 

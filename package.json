@@ -35,7 +35,9 @@
     "react": "^0.14 || ^15"
   },
   "dependencies": {
-    "copy-to-clipboard": "^3"
+    "copy-to-clipboard": "^3",
+    "create-react-class": "^15.5.2",
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "copy-to-clipboard": "3.0.5",
