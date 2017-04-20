@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "copy-to-clipboard": "3.0.5",
-    "react-component-template": "0.1.5"
+    "react-component-template": "0.1.6"
   }
 }
