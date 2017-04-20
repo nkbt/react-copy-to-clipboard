@@ -71,9 +71,10 @@ then include as
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import createReactClass from 'create-react-class';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const App = React.createClass({
+const App = createReactClass({
   getInitialState() {
     return {value: '', copied: false};
   },
@@ -108,12 +109,12 @@ ReactDOM.render(<App />, appRoot);
 ## Options
 
 
-#### `text`: React.PropTypes.string.isRequired
+#### `text`: PropTypes.string.isRequired
 
 Text to be copied to clipboard
 
 
-#### `onCopy`: React.PropTypes.func
+#### `onCopy`: PropTypes.func
 
 Optional callback, will be called when text is copied
 
@@ -123,13 +124,13 @@ onCopy(text, result)
 `result (bool)`: Returns `true` if copied successfully, else `false`.
 
 
-#### `options`: React.PropTypes.shape({debug: bool, message: string})
+#### `options`: PropTypes.shape({debug: bool, message: string})
 
 Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options.
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
-#### `children`: React.PropTypes.node.isRequired
+#### `children`: PropTypes.node.isRequired
 
 CopyToClipboard is a simple wrapping component, it does not render any tags, so it requires the only child element to be present, which will be used to capture clicks.
 
