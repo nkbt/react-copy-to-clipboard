@@ -1,10 +1,11 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import CopyToClipboard from '../..';
 import {name} from '../../../package.json';
 import css from './App.css';
 
 
-const App = React.createClass({
+const App = createReactClass({
   getInitialState() {
     return {value: '', copied: false};
   },
