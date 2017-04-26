@@ -1,11 +1,10 @@
 import React from 'react';
-import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import copy from 'copy-to-clipboard';
 
 
-export const CopyToClipboard = createReactClass({
-  propTypes: {
+export class CopyToClipboard extends React.PureComponent {
+  static propTypes = {
     text: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
     onCopy: PropTypes.func,
@@ -13,10 +12,9 @@ export const CopyToClipboard = createReactClass({
       debug: PropTypes.bool,
       message: PropTypes.string
     })
-  },
+  };
 
-
-  onClick(event) {
+  onClick = event => {
     const {
       text,
       onCopy,
@@ -36,8 +34,7 @@ export const CopyToClipboard = createReactClass({
     if (elem && elem.props && typeof elem.props.onClick === 'function') {
       elem.props.onClick(event);
     }
-  },
-
+  };
 
   render() {
     const {
@@ -51,4 +48,4 @@ export const CopyToClipboard = createReactClass({
 
     return React.cloneElement(elem, {...props, onClick: this.onClick});
   }
-});
+}
