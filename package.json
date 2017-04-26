@@ -39,6 +39,7 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
+    "eslint-plugin-babel": "4.1.1",
     "react-component-template": "0.1.10"
   }
 }
