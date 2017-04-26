@@ -1,30 +1,23 @@
 import React from 'react';
-import createReactClass from 'create-react-class';
 import CopyToClipboard from '../..';
 import {name} from '../../../package.json';
 import css from './App.css';
 
 
-const App = createReactClass({
-  getInitialState() {
-    return {value: '', copied: false};
-  },
+class App extends React.PureComponent {
+  state = {value: '', copied: false};
 
-
-  onChange({target: {value}}) {
+  onChange = ({target: {value}}) => {
     this.setState({value, copied: false});
-  },
+  };
 
-
-  onCopy() {
-    this.setState({copied: true});
-  },
-
-
-  onClick({target: {innerHTML}}) {
+  onClick = ({target: {innerHTML}}) => {
     console.log(`Clicked on "${innerHTML}"!`); // eslint-disable-line
-  },
+  };
 
+  onCopy = () => {
+    this.setState({copied: true});
+  };
 
   render() {
     return (
@@ -55,7 +48,7 @@ const App = createReactClass({
       </div>
     );
   }
-});
+}
 
 
 export default App;
