@@ -32,14 +32,13 @@
   },
   "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
   "peerDependencies": {
-    "react": "^0.14 || ^15"
+    "react": "^15.3.0"
   },
   "dependencies": {
     "copy-to-clipboard": "^3",
-    "create-react-class": "^15.5.2",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "react-component-template": "0.1.9"
+    "react-component-template": "0.1.10"
   }
 }
