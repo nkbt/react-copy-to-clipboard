@@ -41,9 +41,9 @@ export class CopyToClipboard extends React.PureComponent {
       options: _options,
       onClickCapture,  // eslint-disable-line
       children,
-      ...props
+      ...restProps
     } = this.props;
 
-    return React.cloneElement(children, {...props, onClick: this.onClick});
+    return React.cloneElement(children, {...restProps, onClick: this.onClick});
   }
 }
