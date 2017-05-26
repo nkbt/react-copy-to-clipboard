@@ -6,6 +6,7 @@ import copy from 'copy-to-clipboard';
 export class CopyToClipboard extends React.PureComponent {
   static propTypes = {
     text: PropTypes.string.isRequired,
+    onClickCapture: PropTypes.func,
     children: PropTypes.element.isRequired,
     onCopy: PropTypes.func,
     options: PropTypes.shape({
@@ -39,7 +40,7 @@ export class CopyToClipboard extends React.PureComponent {
       text: _text,
       onCopy: _onCopy,
       options: _options,
-      onClickCapture,  // eslint-disable-line
+      onClickCapture: _onClickCapture,
       children,
       ...restProps
     } = this.props;
