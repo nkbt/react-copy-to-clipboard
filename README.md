@@ -71,13 +71,13 @@ then include as
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createReactClass from 'create-react-class';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const App = createReactClass({
-  getInitialState() {
-    return {value: '', copied: false};
-  },
+class App extends React.Component {
+  state = {
+    value: '',
+    copied: false,
+  }
 
   render() {
     return (
@@ -99,7 +99,7 @@ const App = createReactClass({
       </div>
     );
   }
-});
+}
 
 const appRoot = document.createElement('div');
 document.body.appendChild(appRoot);
