@@ -35,7 +35,7 @@
     "react": "^15.3.0"
   },
   "dependencies": {
-    "copy-to-clipboard": "^3",
+    "copy-to-clipboard": "https://github.com/gusano/copy-to-clipboard.git#e513b06",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
