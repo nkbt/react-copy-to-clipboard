@@ -1,0 +1,38 @@
+version: 2
+
+
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:8.4.0
+      - image: selenium/standalone-firefox:3.4.0
+
+    steps:
+      - checkout
+
+
+      - restore_cache:
+          key: deps-{{ checksum "yarn.lock" }}
+
+
+      - run: yarn install --pure-lockfile
+
+
+      - save_cache:
+          key: deps-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+
+
+      - run: yarn lint
+
+
+      - run: yarn test
+
+
+      - run:
+          name: yarn e2e
+          command: |
+            export DOCKER_IP=$(ifconfig | grep "inet addr:" | grep "Bcast:0.0.0.0" | cut -d: -f2 | awk '{ print $1}')
+            yarn e2e
