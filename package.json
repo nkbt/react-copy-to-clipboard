@@ -4,15 +4,24 @@
   "description": "Copy-to-clipboard React component",
   "main": "lib/index.js",
   "config": {
-    "component": "CopyToClipboard"
+    "component": "CopyToClipboard",
+    "externals": {
+      "react": "React",
+      "react-dom": "ReactDOM"
+    }
   },
   "scripts": {
-    "start": "react-component-template",
-    "test": "npm start test",
-    "precommit": "npm start precommit",
-    "prepush": "npm start prepush",
-    "postversion": "npm start postversion",
-    "prepublish": "npm start prepublish"
+    "build": "scripts/build.js",
+    "start": "scripts/dev.js",
+    "dist": "scripts/dist.js",
+    "e2e": "scripts/e2e.js",
+    "ghPages": "scripts/ghPages.js",
+    "lib": "scripts/lib.js",
+    "lint": "scripts/lint.js",
+    "pub": "scripts/pub.js",
+    "test": "scripts/test.js",
+    "prepublish": "yarn build",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -39,7 +48,45 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "eslint-plugin-babel": "4.1.1",
-    "react-component-template": "0.1.10"
-  }
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "finalhandler": "^1.0.4",
+    "gh-pages": "^1.0.0",
+    "glob": "^7.1.2",
+    "html-webpack-include-assets-plugin": "^1.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "nightwatch": "^0.9.16",
+    "portfinder": "^1.0.13",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "rimraf": "^2.6.1",
+    "serve-static": "^1.12.3",
+    "style-loader": "^0.18.2",
+    "tape": "^4.8.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "files": [
+    "build",
+    "lib",
+    "src",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
 }

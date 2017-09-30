@@ -1,14 +1,40 @@
 {
-  "extends": "./node_modules/react-component-template/.eslintrc",
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
   "plugins": [
     "babel"
   ],
   "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "quotes": 0,
+    "object-curly-spacing": [2, "never"],
+    "comma-dangle": [2, "never"],
+    "no-unused-vars": [2, {"varsIgnorePattern": "^_", "argsIgnorePattern": "^_"}],
+    "no-invalid-this": 0,
+    "no-confusing-arrow": 0,
+    "no-console": 0,
+    "strict": 0,
+    "global-require": 0,
+    "lines-around-directive": [2, {"before": "never", "after": "always"}],
+    "import/no-dynamic-require": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 0,
     "babel/new-cap": 2,
     "babel/object-curly-spacing": 2,
     "babel/no-invalid-this": 2,
     "babel/semi": 2,
-    "no-invalid-this": 0,
-    "react/jsx-sort-props": 0
+    "jsx-a11y/href-no-hash": 0,
+    "jsx-a11y/label-has-for": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [2, {"extensions": [".js"]}],
+    "react/jsx-closing-bracket-location": [2, {"nonEmpty": "after-props", "selfClosing": "after-props"}],
+    "react/jsx-sort-props": 0,
+    "react/no-multi-comp": 0,
+    "react/prefer-es6-class": 2,
+    "react/no-array-index-key": 0
+
   }
 }
