@@ -139,7 +139,7 @@ var App = function (_React$PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = { value: 'some text', copied: false }, _this.onChange = function (_ref2) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = { value: 'some\ntext', copied: false }, _this.onChange = function (_ref2) {
       var value = _ref2.target.value;
 
       _this.setState({ value: value, copied: false });
@@ -166,7 +166,7 @@ var App = function (_React$PureComponent) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'section',
           { className: 'section' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { onChange: this.onChange, size: 10, value: this.state.value })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { onChange: this.onChange, rows: 2, cols: 10, value: this.state.value })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'section',
