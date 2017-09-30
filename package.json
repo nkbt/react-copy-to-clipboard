@@ -57,6 +57,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.2",
     "css-loader": "^0.28.4",
     "eslint": "^4.4.0",
     "eslint-config-airbnb": "^15.1.0",

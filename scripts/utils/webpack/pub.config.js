@@ -9,7 +9,8 @@ const {
   loaders,
   resolve,
   stats,
-  externals
+  externals,
+  INCLUDE_JS
 } = require(`./common`);
 
 
@@ -23,11 +24,7 @@ module.exports = {
   plugins: [
     plugins.define,
     plugins.html,
-    plugins.include([
-      `https://unpkg.com/react@16.0.0/umd/react.production.min.js`,
-      `https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js`,
-      `styles.css`
-    ]),
+    plugins.include(INCLUDE_JS.concat([`styles.css`])),
     new ExtractTextPlugin(`styles.css`)
   ],
   module: {
