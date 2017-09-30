@@ -1,5 +1,5 @@
 import React from 'react';
-import CopyToClipboard from '../..';
+import {CopyToClipboard} from '../../src';
 
 
 export class App extends React.PureComponent {

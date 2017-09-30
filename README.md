@@ -47,13 +47,13 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CopyToClipboard from 'react-copy-to-clipboard';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class App extends React.Component {
   state = {
     value: '',
     copied: false,
-  }
+  };
 
   render() {
     return (
@@ -142,6 +142,9 @@ yarn lint
 yarn test
 
 # to run end-to-end tests
+# first, run `selenium/standalone-firefox:3.4.0` docker image
+docker run selenium/standalone-firefox:3.4.0
+# then run test
 yarn e2e
 ```
 
