@@ -143,7 +143,7 @@ yarn test
 
 # to run end-to-end tests
 # first, run `selenium/standalone-firefox:3.4.0` docker image
-docker run selenium/standalone-firefox:3.4.0
+docker run -p 4444:4444 selenium/standalone-firefox:3.4.0
 # then run test
 yarn e2e
 ```
