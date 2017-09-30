@@ -3,7 +3,7 @@ import {CopyToClipboard} from '../../src';
 
 
 export class App extends React.PureComponent {
-  state = {value: 'some text', copied: false};
+  state = {value: 'some\ntext', copied: false};
 
   onChange = ({target: {value}}) => {
     this.setState({value, copied: false});
@@ -23,7 +23,7 @@ export class App extends React.PureComponent {
         <h1>react-copy-to-clipboard</h1>
 
         <section className="section">
-          <input onChange={this.onChange} size={10} value={this.state.value} />
+          <textarea onChange={this.onChange} rows={2} cols={10} value={this.state.value} />
         </section>
 
         <section className="section">
