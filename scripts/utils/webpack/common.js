@@ -24,7 +24,7 @@ const {
     },
     include: INCLUDE_JS = [
       `https://unpkg.com/react@16.0.0/umd/react.production.min.js`,
-      `https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js`,
+      `https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js`
     ]
   },
   name: PACKAGE_NAME
