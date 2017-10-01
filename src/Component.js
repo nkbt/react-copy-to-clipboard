@@ -6,6 +6,7 @@ import copy from 'copy-to-clipboard';
 export class CopyToClipboard extends React.PureComponent {
   static propTypes = {
     text: PropTypes.string.isRequired,
+    onClickCapture: PropTypes.func,
     children: PropTypes.element.isRequired,
     onCopy: PropTypes.func,
     options: PropTypes.shape({
@@ -29,8 +30,6 @@ export class CopyToClipboard extends React.PureComponent {
       options
     } = this.props;
 
-    const elem = React.Children.only(children);
-
     const result = copy(text, options);
 
     if (onCopy) {
@@ -38,8 +37,8 @@ export class CopyToClipboard extends React.PureComponent {
     }
 
     // Bypass onClick if it was present
-    if (elem && elem.props && typeof elem.props.onClick === 'function') {
-      elem.props.onClick(event);
+    if (children && children.props && typeof children.props.onClick === 'function') {
+      children.props.onClick(event);
     }
   };
 
@@ -49,11 +48,11 @@ export class CopyToClipboard extends React.PureComponent {
       text: _text,
       onCopy: _onCopy,
       options: _options,
+      onClickCapture: _onClickCapture,
       children,
-      ...props
+      ...restProps
     } = this.props;
-    const elem = React.Children.only(children);
 
-    return React.cloneElement(elem, {...props, onClick: this.onClick});
+    return React.cloneElement(children, {...restProps, onClick: this.onClick});
   }
 }
