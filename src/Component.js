@@ -31,10 +31,12 @@ export class CopyToClipboard extends React.PureComponent {
 
     const elem = React.Children.only(children);
 
-    const result = copy(text, options);
+    if (text.trim() !== '') {
+      const result = copy(text, options);
 
-    if (onCopy) {
-      onCopy(text, result);
+      if (onCopy) {
+        onCopy(text, result);
+      }
     }
 
     // Bypass onClick if it was present
