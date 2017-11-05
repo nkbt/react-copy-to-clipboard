@@ -17,6 +17,8 @@ export class App extends React.PureComponent {
     this.setState({copied: true});
   };
 
+  transform = text => `"${text.trim()}"`;
+
   render() {
     return (
       <div className="app">
@@ -29,6 +31,16 @@ export class App extends React.PureComponent {
         <section className="section">
           <h2>1. Button</h2>
           <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
+            <button>Copy to clipboard with button</button>
+          </CopyToClipboard>
+        </section>
+
+        <section className="section">
+          <h2>2. Button with transformer</h2>
+          <CopyToClipboard
+            onCopy={this.onCopy}
+            text={this.state.value}
+            transformer={this.transform}>
             <button>Copy to clipboard with button</button>
           </CopyToClipboard>
         </section>
