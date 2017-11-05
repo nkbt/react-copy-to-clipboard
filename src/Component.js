@@ -52,6 +52,7 @@ export class CopyToClipboard extends React.PureComponent {
       text: _text,
       onCopy: _onCopy,
       options: _options,
+      transformer: _transformer,
       children,
       ...props
     } = this.props;
