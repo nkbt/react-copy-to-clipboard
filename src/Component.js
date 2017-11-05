@@ -8,6 +8,7 @@ export class CopyToClipboard extends React.PureComponent {
     text: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
     onCopy: PropTypes.func,
+    transformer: PropTypes.func,
     options: PropTypes.shape({
       debug: PropTypes.bool,
       message: PropTypes.string
@@ -17,7 +18,8 @@ export class CopyToClipboard extends React.PureComponent {
 
   static defaultProps = {
     onCopy: undefined,
-    options: undefined
+    options: undefined,
+    transformer: text => text
   };
 
 
@@ -25,16 +27,17 @@ export class CopyToClipboard extends React.PureComponent {
     const {
       text,
       onCopy,
+      transformer,
       children,
       options
     } = this.props;
 
     const elem = React.Children.only(children);
-
-    const result = copy(text, options);
+    const transformedText = transformer(text);
+    const result = copy(transformedText, options);
 
     if (onCopy) {
-      onCopy(text, result);
+      onCopy(transformedText, result);
     }
 
     // Bypass onClick if it was present
@@ -49,6 +52,7 @@ export class CopyToClipboard extends React.PureComponent {
       text: _text,
       onCopy: _onCopy,
       options: _options,
+      transformer: _transformer,
       children,
       ...props
     } = this.props;
