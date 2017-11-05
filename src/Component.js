@@ -19,7 +19,7 @@ export class CopyToClipboard extends React.PureComponent {
   static defaultProps = {
     onCopy: undefined,
     options: undefined,
-    transformer: (text) => text
+    transformer: text => text
   };
 
 
