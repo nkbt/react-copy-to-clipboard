@@ -21,7 +21,7 @@ Based on [copy-to-clipboard](https://npm.im/copy-to-clipboard)
 ### NPM
 
 ```sh
-npm install --save react react-copy-to-clipboard
+npm install --save react-copy-to-clipboard
 ```
 
 Don't forget to manually install peer dependencies (`react`) if you use npm@3.
