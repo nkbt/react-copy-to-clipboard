@@ -71,7 +71,7 @@ class App extends React.Component {
           <button>Copy to clipboard with button</button>
         </CopyToClipboard>
 
-        {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
+        {this.state.copied && <span style={{color: 'red'}}>Copied.</span>}
       </div>
     );
   }
