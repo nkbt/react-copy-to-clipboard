@@ -1,5 +1,5 @@
 {
-  "name": "react-copy-to-clipboard",
+  "name": "@nos/react-copy-to-clipboard",
   "version": "5.0.1",
   "description": "Copy-to-clipboard React component",
   "main": "lib/index.js",
