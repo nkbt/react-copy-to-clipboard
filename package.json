@@ -44,7 +44,7 @@
     "react": "^15.3.0 || ^16.0.0"
   },
   "dependencies": {
-    "copy-to-clipboard": "^3",
+    "copy-to-clipboard": "https://github.com/nos/copy-to-clipboard",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
