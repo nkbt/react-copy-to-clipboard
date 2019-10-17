@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import copy from 'copy-to-clipboard';
 
 
-export class CopyToClipboard extends React.PureComponent {
+export class CopyToClipboard extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
