@@ -20,7 +20,7 @@
     "predist": "rm -rf ./build",
     "dist": "NODE_ENV=production webpack-cli --config ./webpack/dist.config.js && NODE_ENV=production webpack-cli --config ./webpack/min.config.js",
     "preghPages": "yarn pub",
-    "ghPages": "gh-pages --dist ./pub --repo git@github.com:nkbt/react-debounce-input.git --user nik@butenko.me --branch gh-pages --message 'Publish examples' ",
+    "ghPages": "gh-pages --dist ./pub --repo git@github.com:nkbt/react-copy-to-clipboard.git --user nik@butenko.me --branch gh-pages --message 'Publish examples' ",
     "prelib": "rm -rf ./lib",
     "lib": "NODE_ENV=production babel src --out-dir lib",
     "lint": "eslint .",
