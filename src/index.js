@@ -1,5 +1,3 @@
-'use strict';
-
 
 const {CopyToClipboard} = require('./Component');
 

@@ -18,24 +18,27 @@ export class App extends React.PureComponent {
   };
 
   render() {
+    const {value, copied} = this.state;
     return (
       <div className="app">
         <h1>react-copy-to-clipboard</h1>
 
         <section className="section">
-          <textarea onChange={this.onChange} rows={2} cols={10} value={this.state.value} />
+          <textarea onChange={this.onChange} rows={2} cols={10} value={value} />
         </section>
 
         <section className="section">
           <h2>1. Button</h2>
-          <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
-            <button>Copy to clipboard with button</button>
+          <CopyToClipboard onCopy={this.onCopy} text={value}>
+            <button type="button">
+              Copy to clipboard with button
+            </button>
           </CopyToClipboard>
         </section>
 
         <section className="section">
           <h2>2. Span</h2>
-          <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>
+          <CopyToClipboard onCopy={this.onCopy} text={value}>
             <span>Copy to clipboard with span</span>
           </CopyToClipboard>
         </section>
@@ -45,13 +48,15 @@ export class App extends React.PureComponent {
           <CopyToClipboard
             onCopy={this.onCopy}
             options={{message: 'Whoa!'}}
-            text={this.state.value}>
-            <button onClick={this.onClick}>Copy to clipboard with onClick prop</button>
+            text={value}>
+            <button type="button" onClick={this.onClick}>
+              Copy to clipboard with onClick prop
+            </button>
           </CopyToClipboard>
         </section>
 
         <section className="section">
-          {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
+          {copied ? <span style={{color: 'red'}}>Copied.</span> : null}
         </section>
 
         <section className="section">
