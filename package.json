@@ -31,7 +31,7 @@
     "postversion": "git push --follow-tags",
     "nuke": "rm -rf node_modules yarn.lock",
     "postnuke": "yarn install",
-    "deps": "! depcheck --specials=bin,eslint --ignore-dirs=build,lib,pub  --ignores=@types/* | grep --invert-match 'No depcheck issue'"
+    "deps": "! depcheck --specials=bin,eslint --ignore-dirs=build,lib,pub | grep --invert-match 'No depcheck issue'"
   },
   "repository": {
     "type": "git",
@@ -65,12 +65,11 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "@types/react": "^16.9.7",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "css-loader": "^3.2.0",
-    "depcheck": "^0.8.3",
+    "depcheck": "^0.9.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
