@@ -10,7 +10,8 @@ export class CopyToClipboard extends React.PureComponent {
     onCopy: PropTypes.func,
     options: PropTypes.shape({
       debug: PropTypes.bool,
-      message: PropTypes.string
+      message: PropTypes.string,
+      format: PropTypes.string
     })
   };
 
