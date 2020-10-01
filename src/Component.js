@@ -17,8 +17,8 @@ export class CopyToClipboard extends React.PureComponent {
 
 
   static defaultProps = {
-    onCopy: "",
-    options: ""
+    onCopy: null,
+    options: null
   };
 
 
