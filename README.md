@@ -47,7 +47,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 class App extends React.Component {
   state = {
