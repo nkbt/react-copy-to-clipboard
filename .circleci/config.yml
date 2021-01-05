@@ -9,7 +9,6 @@ jobs:
 
     steps:
       - checkout
-      - run: yarn set version berry
       - run: yarn install --immutable --immutable-cache
       - run: yarn check:deps
       - run: yarn lint
