@@ -95,7 +95,7 @@ onCopy(text, result)
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
  
-Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. Here is a [demo](https://jinno.io/app/18/shape)
+Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. Here is a [demo](https://jinno.io/app/18/debug)
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
