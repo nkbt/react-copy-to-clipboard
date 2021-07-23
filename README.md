@@ -12,9 +12,11 @@ Based on [copy-to-clipboard](https://npm.im/copy-to-clipboard)
 
 > Would try to use execCommand with fallback to IE specific clipboardData interface and finally, fallback to simple prompt with proper text content & 'Copy to clipboard: Ctrl+C, Enter'
 
+## Live Demo
+
+[https://jinno.io/app/18/](https://jinno.io/app/18/)
 
 ![Copy to clipboard](example/copy-to-clipboard.gif)
-
 
 ## Installation
 
@@ -33,10 +35,6 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 <script src="https://unpkg.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
 (Module exposed as `CopyToClipboard`)
 ```
-
-## Live Demo
-
-[https://jinno.io/app/18/](https://jinno.io/app/18/)
 
 ## Usage
 ```js
@@ -82,12 +80,12 @@ ReactDOM.render(<App />, appRoot);
 
 #### `text`: PropTypes.string.isRequired
 
-Text to be copied to clipboard. Check the [Demo](https://jinno.io/app/18/text)
+Text to be copied to clipboard. Here is a [demo](https://jinno.io/app/18/text)
 
 
 #### `onCopy`: PropTypes.func
 
-Optional callback, will be called when text is copied . Check the [Demo](https://jinno.io/app/18/onCopy)
+Optional callback, will be called when text is copied . Here is a [demo](https://jinno.io/app/18/onCopy)
 
 ```
 onCopy(text, result)
@@ -97,7 +95,7 @@ onCopy(text, result)
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
  
-Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. [Demo](https://jinno.io/app/18/shape)
+Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. Here is a [demo](https://jinno.io/app/18/shape)
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
