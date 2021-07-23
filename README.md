@@ -34,14 +34,9 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 (Module exposed as `CopyToClipboard`)
 ```
 
+## Live Demo
 
-## Demo
-
-[http://nkbt.github.io/react-copy-to-clipboard](http://nkbt.github.io/react-copy-to-clipboard)
-
-## Codepen demo
-
-[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv?editors=0010)
+[https://jinno.io/app/18/](https://jinno.io/app/18/)
 
 ## Usage
 ```js
@@ -87,12 +82,12 @@ ReactDOM.render(<App />, appRoot);
 
 #### `text`: PropTypes.string.isRequired
 
-Text to be copied to clipboard
+Text to be copied to clipboard. Check the [Demo](https://jinno.io/app/18/text)
 
 
 #### `onCopy`: PropTypes.func
 
-Optional callback, will be called when text is copied
+Optional callback, will be called when text is copied . Check the [Demo](https://jinno.io/app/18/onCopy)
 
 ```
 onCopy(text, result)
@@ -101,8 +96,8 @@ onCopy(text, result)
 
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
-
-Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options.
+ 
+Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. [Demo](https://jinno.io/app/18/shape)
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
