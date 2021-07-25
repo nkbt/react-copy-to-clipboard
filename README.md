@@ -38,6 +38,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 ## Demo
 [https://jinno.io/app/18/](https://jinno.io/app/18/)
+
 [http://nkbt.github.io/react-copy-to-clipboard](http://nkbt.github.io/react-copy-to-clipboard)
 
 ## Usage
