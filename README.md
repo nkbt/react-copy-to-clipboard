@@ -14,7 +14,7 @@ Based on [copy-to-clipboard](https://npm.im/copy-to-clipboard)
 
 ## Live Demo
 
-[https://jinno.io/app/18/](https://jinno.io/app/18/)
+[https://jinno.io/app/18/](https://jinno.io/app/18/?source=react-copy-to-clipboard)
 
 ![Copy to clipboard](example/copy-to-clipboard.gif)
 
@@ -37,7 +37,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 ```
 
 ## Demo
-[https://jinno.io/app/18/](https://jinno.io/app/18/)
+[https://jinno.io/app/18/](https://jinno.io/app/18/?source=react-copy-to-clipboard)
 
 [http://nkbt.github.io/react-copy-to-clipboard](http://nkbt.github.io/react-copy-to-clipboard)
 
@@ -85,12 +85,12 @@ ReactDOM.render(<App />, appRoot);
 
 #### `text`: PropTypes.string.isRequired
 
-Text to be copied to clipboard. Here is a [demo](https://jinno.io/app/18/text)
+Text to be copied to clipboard. Here is a [demo](https://jinno.io/app/18/text?source=react-copy-to-clipboard)
 
 
 #### `onCopy`: PropTypes.func
 
-Optional callback, will be called when text is copied . Here is a [demo](https://jinno.io/app/18/onCopy)
+Optional callback, will be called when text is copied . Here is a [demo](https://jinno.io/app/18/onCopy?source=react-copy-to-clipboard)
 
 ```
 onCopy(text, result)
@@ -100,7 +100,7 @@ onCopy(text, result)
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
  
-Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. Here is a [demo](https://jinno.io/app/18/debug)
+Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. Here is a [demo](https://jinno.io/app/18/debug?source=react-copy-to-clipboard)
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
