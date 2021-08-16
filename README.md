@@ -95,7 +95,7 @@ Text to be copied to clipboard
 Optional callback, will be called when text is copied
 
 ```
-onCopy(text, result)
+onCopy(text, result, event)
 ```
 `result (bool)`: Returns `true` if copied successfully, else `false`.
 
