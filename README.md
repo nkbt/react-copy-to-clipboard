@@ -34,8 +34,11 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 (Module exposed as `CopyToClipboard`)
 ```
 
+## Live design system demo
 
-## Demo
+[https://www.jinno.io/app/18/](https://www.jinno.io/app/18/?source=react-copy-to-clipboard)
+
+## Simple web demo
 
 [http://nkbt.github.io/react-copy-to-clipboard](http://nkbt.github.io/react-copy-to-clipboard)
 
