@@ -5,7 +5,7 @@ jobs:
   ui:
     working_directory: ~/app
     docker:
-      - image: cimg/node:14.15.3-browsers
+      - image: cimg/node:16.3.0-browsers
 
     steps:
       - checkout
