@@ -2,24 +2,24 @@ version: 2
 
 
 jobs:
-  build:
+  ui:
     working_directory: ~/app
     docker:
-      - image: circleci/node:10
+      - image: cimg/node:16.3.0-browsers
 
     steps:
       - checkout
-      - restore_cache:
-          key: deps-{{ checksum "yarn.lock" }}
-      - run: yarn install --pure-lockfile --offline
-      - run: yarn deps
-      - save_cache:
-          key: deps-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-            - node_modules
+      - run: yarn install --immutable --immutable-cache
+      - run: yarn check:deps
       - run: yarn lint
       - run: yarn test
       - run: yarn lib
       - run: yarn dist
       - run: yarn pub
+
+
+workflows:
+  version: 2
+  dev:
+    jobs:
+      - ui

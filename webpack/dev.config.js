@@ -21,6 +21,11 @@ module.exports = {
     filename: 'bundle.js',
     path: pathTo('dev')
   },
+  optimization: {
+    minimize: false,
+    moduleIds: 'named',
+    chunkIds: 'named'
+  },
   plugins: [
     plugins.html
   ],

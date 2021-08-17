@@ -1,4 +1,3 @@
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
   pathTo,
@@ -20,7 +19,9 @@ module.exports = {
     path: pathTo('pub')
   },
   optimization: {
-    minimize: false
+    minimize: false,
+    moduleIds: 'named',
+    chunkIds: 'named'
   },
   plugins: [
     plugins.html,

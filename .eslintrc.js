@@ -22,7 +22,7 @@ module.exports = {
         'lifecycle',
         'everything-else',
         'render'
-      ],
+      ]
     }],
     'react/jsx-filename-extension': ['error', {extensions: ['.js']}],
     'react/jsx-closing-bracket-location': ['error', {

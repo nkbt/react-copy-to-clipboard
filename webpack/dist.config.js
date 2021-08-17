@@ -22,7 +22,9 @@ module.exports = {
     libraryTarget: 'umd'
   },
   optimization: {
-    minimize: false
+    minimize: false,
+    moduleIds: 'named',
+    chunkIds: 'named'
   },
   plugins: [
     plugins.emptyPropTypes

@@ -22,6 +22,11 @@ module.exports = {
     library: COMPONENT_NAME,
     libraryTarget: 'umd'
   },
+  optimization: {
+    minimize: true,
+    moduleIds: 'named',
+    chunkIds: 'named'
+  },
   plugins: [
     plugins.emptyPropTypes,
     plugins.loaderOptions
