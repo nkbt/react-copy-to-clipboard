@@ -12,7 +12,9 @@ Based on [copy-to-clipboard](https://npm.im/copy-to-clipboard)
 
 > Would try to use execCommand with fallback to IE specific clipboardData interface and finally, fallback to simple prompt with proper text content & 'Copy to clipboard: Ctrl+C, Enter'
 
+
 ![Copy to clipboard](example/copy-to-clipboard.gif)
+
 
 ## Installation
 
@@ -36,6 +38,10 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 [https://www.jinno.io/app/18/](https://www.jinno.io/app/18/?source=react-copy-to-clipboard)
 
 [http://nkbt.github.io/react-copy-to-clipboard](http://nkbt.github.io/react-copy-to-clipboard)
+
+## Codepen demo
+
+[http://codepen.io/nkbt/pen/eNPoQv](http://codepen.io/nkbt/pen/eNPoQv?editors=0010)
 
 ## Usage
 ```js
