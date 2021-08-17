@@ -31,7 +31,9 @@
     "postversion": "git push --follow-tags",
     "nuke": "rm -rf node_modules yarn.lock",
     "postnuke": "yarn install",
-    "deps": "! depcheck --specials=bin,eslint --ignore-dirs=build,lib,pub | grep --invert-match 'No depcheck issue'"
+    "deps": "! depcheck --specials=bin,eslint --ignore-dirs=build,lib,pub | grep --invert-match 'No depcheck issue'",
+    "offline-update": "yarn cache clean && yarn install --force",
+    "offline": "yarn install --pure-lockfile --offline"
   },
   "repository": {
     "type": "git",
