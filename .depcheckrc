@@ -1,0 +1,9 @@
+ignores: [
+  "webpack-dev-server"
+]
+ignore-dirs: [
+  ".yarn",
+  "build",
+  "lib",
+  "pub"
+]
