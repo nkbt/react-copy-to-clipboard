@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "yarn lib && yarn dist",
-    "start": "NODE_ENV=development webpack-dev-server --config ./webpack/dev.config.js",
+    "start": "NODE_ENV=development webpack-cli serve --config ./webpack/dev.config.js",
     "predist": "rm -rf ./build",
     "dist": "NODE_ENV=production webpack-cli --config ./webpack/dist.config.js && NODE_ENV=production webpack-cli --config ./webpack/min.config.js",
     "preghPages": "yarn pub",
