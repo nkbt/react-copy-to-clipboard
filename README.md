@@ -90,12 +90,12 @@ ReactDOM.render(<App />, appRoot);
 
 #### `text`: PropTypes.string.isRequired
 
-Text to be copied to clipboard.
+Text to be copied to clipboard
 
 
 #### `onCopy`: PropTypes.func
 
-Optional callback, will be called when text is copied .
+Optional callback, will be called when text is copied
 
 ```
 onCopy(text, result)
@@ -104,7 +104,6 @@ onCopy(text, result)
 
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
- 
 Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options.
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
