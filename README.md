@@ -104,6 +104,7 @@ onCopy(text, result)
 
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
+
 Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options.
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
