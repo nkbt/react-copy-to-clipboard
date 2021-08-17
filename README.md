@@ -87,12 +87,12 @@ ReactDOM.render(<App />, appRoot);
 
 #### `text`: PropTypes.string.isRequired
 
-Text to be copied to clipboard. Here is a [demo](https://www.jinno.io/app/18/text?source=react-copy-to-clipboard)
+Text to be copied to clipboard.
 
 
 #### `onCopy`: PropTypes.func
 
-Optional callback, will be called when text is copied . Here is a [demo](https://www.jinno.io/app/18/onCopy?source=react-copy-to-clipboard)
+Optional callback, will be called when text is copied .
 
 ```
 onCopy(text, result)
@@ -102,7 +102,7 @@ onCopy(text, result)
 
 #### `options`: PropTypes.shape({debug: bool, message: string})
  
-Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options. Here is a [demo](https://www.jinno.io/app/18/debug?source=react-copy-to-clipboard)
+Optional [copy-to-clipboard](https://npm.im/copy-to-clipboard) options.
 
 See [API docs](https://npm.im/copy-to-clipboard#api) for details
 
