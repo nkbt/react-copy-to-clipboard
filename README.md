@@ -14,8 +14,6 @@ Based on [copy-to-clipboard](https://npm.im/copy-to-clipboard)
 
 ## Live Demo
 
-[https://www.jinno.io/app/18/](https://www.jinno.io/app/18/?source=react-copy-to-clipboard)
-
 ![Copy to clipboard](example/copy-to-clipboard.gif)
 
 ## Installation
