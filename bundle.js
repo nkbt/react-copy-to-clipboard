@@ -293,6 +293,12 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 var deselectCurrent = __webpack_require__(/*! toggle-selection */ "./node_modules/toggle-selection/index.js");
 
+var clipboardToIE11Formatting = {
+  "text/plain": "Text",
+  "text/html": "Url",
+  "default": "Text"
+}
+
 var defaultMessage = "Copy to clipboard: #{key}, Enter";
 
 function format(message) {
@@ -337,8 +343,20 @@ function copy(text, options) {
       e.stopPropagation();
       if (options.format) {
         e.preventDefault();
-        e.clipboardData.clearData();
-        e.clipboardData.setData(options.format, text);
+        if (typeof e.clipboardData === "undefined") { // IE 11
+          debug && console.warn("unable to use e.clipboardData");
+          debug && console.warn("trying IE specific stuff");
+          window.clipboardData.clearData();
+          var format = clipboardToIE11Formatting[options.format] || clipboardToIE11Formatting["default"]
+          window.clipboardData.setData(format, text);
+        } else { // all other browsers
+          e.clipboardData.clearData();
+          e.clipboardData.setData(options.format, text);
+        }
+      }
+      if (options.onCopy) {
+        e.preventDefault();
+        options.onCopy(e.clipboardData);
       }
     });
 
@@ -357,6 +375,7 @@ function copy(text, options) {
     debug && console.warn("trying IE specific stuff");
     try {
       window.clipboardData.setData(options.format || "text", text);
+      options.onCopy && options.onCopy(window.clipboardData);
       success = true;
     } catch (err) {
       debug && console.error("unable to copy using clipboardData: ", err);
@@ -1684,7 +1703,8 @@ _defineProperty(CopyToClipboard, "propTypes", {
   onCopy: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   options: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
     debug: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-    message: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+    message: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    format: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
   })
 });
 
