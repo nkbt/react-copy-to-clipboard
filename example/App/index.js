@@ -1,6 +1,9 @@
 import React from 'react';
 import {CopyToClipboard} from '../../src';
 
+const onClick = ({target: {innerHTML}}) => {
+  console.log(`Clicked on "${innerHTML}"!`); // eslint-disable-line
+};
 
 export class App extends React.PureComponent {
   state = {value: 'some\ntext', copied: false};
@@ -9,9 +12,6 @@ export class App extends React.PureComponent {
     this.setState({value, copied: false});
   };
 
-  onClick = ({target: {innerHTML}}) => {
-    console.log(`Clicked on "${innerHTML}"!`); // eslint-disable-line
-  };
 
   onCopy = () => {
     this.setState({copied: true});
@@ -49,7 +49,7 @@ export class App extends React.PureComponent {
             onCopy={this.onCopy}
             options={{message: 'Whoa!'}}
             text={value}>
-            <button type="button" onClick={this.onClick}>
+            <button type="button" onClick={onClick}>
               Copy to clipboard with onClick prop
             </button>
           </CopyToClipboard>
