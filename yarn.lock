@@ -6363,7 +6363,7 @@ fsevents@~2.3.2:
     webpack-cli: ^4.9.2
     webpack-dev-server: ^4.8.1
   peerDependencies:
-    react: ^15.3.0 || ^16.0.0 || ^17.0.0
+    react: ^15.3.0 || 16 || 17 || 18
   languageName: unknown
   linkType: soft
 
