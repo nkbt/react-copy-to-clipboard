@@ -96,5 +96,6 @@
     "LICENSE",
     "package.json",
     "README.md"
-  ]
+  ],
+  "packageManager": "yarn@3.2.0"
 }
