@@ -42,6 +42,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+var onClick = function onClick(_ref) {
+  var innerHTML = _ref.target.innerHTML;
+  console.log("Clicked on \"".concat(innerHTML, "\"!")); // eslint-disable-line
+};
+
 var App = /*#__PURE__*/function (_React$PureComponent) {
   _inherits(App, _React$PureComponent);
 
@@ -63,18 +69,13 @@ var App = /*#__PURE__*/function (_React$PureComponent) {
       copied: false
     });
 
-    _defineProperty(_assertThisInitialized(_this), "onChange", function (_ref) {
-      var value = _ref.target.value;
+    _defineProperty(_assertThisInitialized(_this), "onChange", function (_ref2) {
+      var value = _ref2.target.value;
 
       _this.setState({
         value: value,
         copied: false
       });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onClick", function (_ref2) {
-      var innerHTML = _ref2.target.innerHTML;
-      console.log("Clicked on \"".concat(innerHTML, "\"!")); // eslint-disable-line
     });
 
     _defineProperty(_assertThisInitialized(_this), "onCopy", function () {
@@ -123,7 +124,7 @@ var App = /*#__PURE__*/function (_React$PureComponent) {
         text: value
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         type: "button",
-        onClick: this.onClick
+        onClick: onClick
       }, "Copy to clipboard with onClick prop"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
         className: "section"
       }, copied ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -1336,6 +1337,39 @@ module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/client.js":
+/*!******************************************!*\
+  !*** ./node_modules/react-dom/client.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var m = __webpack_require__(/*! react-dom */ "react-dom");
+if (false) {} else {
+  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.createRoot(c, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+  exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.hydrateRoot(c, h, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -1693,8 +1727,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./example/App/index.js");
 /* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reset.css */ "./example/reset.css");
 /* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.css */ "./example/app.css");
@@ -1706,7 +1739,7 @@ __webpack_require__.r(__webpack_exports__);
 var appRoot = document.createElement('div');
 appRoot.id = 'app';
 document.body.appendChild(appRoot);
-react_dom__WEBPACK_IMPORTED_MODULE_1___default().render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_2__.App, null)), appRoot);
+react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(appRoot).render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_2__.App, null)));
 })();
 
 /******/ })()
