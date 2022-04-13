@@ -38,11 +38,6 @@ module.exports = {
   resolve,
   stats,
   devServer: {
-    historyApiFallback: true,
-    stats: {
-      // Do not show list of hundreds of files included in a bundle
-      chunkModules: false,
-      colors: true
-    }
+    historyApiFallback: true
   }
 };

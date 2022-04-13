@@ -30,9 +30,7 @@
     "prepublishOnly": "yarn build",
     "postversion": "git push --follow-tags",
     "deps": "depcheck",
-    "check:deps": "[ ! $(depcheck | grep --invert-match 'No depcheck issue') ]",
-    "offline-update": "yarn cache clean && yarn install --force",
-    "offline": "yarn install --pure-lockfile --offline"
+    "check:deps": "[ ! $(depcheck | grep --invert-match 'No depcheck issue') ]"
   },
   "repository": {
     "type": "git",
@@ -52,42 +50,42 @@
   },
   "homepage": "https://github.com/nkbt/react-copy-to-clipboard",
   "peerDependencies": {
-    "react": "^15.3.0 || ^16.0.0 || ^17.0.0"
+    "react": "^15.3.0 || 16 || 17 || 18"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/register": "^7.15.3",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/register": "^7.17.7",
+    "babel-loader": "^8.2.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "css-loader": "^6.2.0",
-    "depcheck": "^1.4.2",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "css-loader": "^6.7.1",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
     "gh-pages": "^3.2.3",
-    "html-webpack-plugin": "^5.3.2",
-    "html-webpack-tags-plugin": "^3.0.1",
-    "mini-css-extract-plugin": "^2.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "style-loader": "^3.2.1",
-    "tape": "^5.3.1",
-    "webpack": "^5.50.0",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^3.11.2"
+    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-tags-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^2.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "style-loader": "^3.3.1",
+    "tape": "^5.5.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   },
   "files": [
     "build",
@@ -96,5 +94,6 @@
     "LICENSE",
     "package.json",
     "README.md"
-  ]
+  ],
+  "packageManager": "yarn@3.2.0"
 }
