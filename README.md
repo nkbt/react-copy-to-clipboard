@@ -119,6 +119,30 @@ CopyToClipboard is a simple wrapping component, it does not render any tags, so 
 </CopyToClipboard>
 ```
 
+## Hooks
+### useClipboard
+```js
+import {useClipboard} from 'react-copy-to-clipboard';
+
+const CopyButton = () => {
+  const [isCopy, setClipboard] = useClipboard()
+  const onClickButton = () => {
+    setClipboard('Copy Text Example')
+  }
+
+  return (
+    <div>
+      {isCopy && <span>Copied!</span>}
+      <button onClick={onClickButton}>Submit</button>
+    </div>
+  )
+}
+
+```
+#### `setClipboard`: PropTypes.func
+#### `isCopy`: PropTypes.booleen
+
+
 ## Development and testing
 
 Currently is being developed and tested with the latest stable `Node 8` on `OSX`.
