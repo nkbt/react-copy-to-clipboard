@@ -1,6 +1,9 @@
-
 const {CopyToClipboard} = require('./Component');
+const {useClipboard} = require('./Hook');
 
+const ClipboardModules = {
+  CopyToClipboard,
+  useClipboard
+};
 
-CopyToClipboard.CopyToClipboard = CopyToClipboard;
-module.exports = CopyToClipboard;
+module.exports = ClipboardModules;

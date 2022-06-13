@@ -21,7 +21,7 @@ babel({
 });
 
 const test = require('tape');
-const {CopyToClipboard} = require('../src/Component');
+const {CopyToClipboard} = require('../src');
 
 test('CopyToClipboard', t => {
   t.ok(CopyToClipboard instanceof Function, 'should be function');
