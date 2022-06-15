@@ -8,6 +8,7 @@ export class CopyToClipboard extends React.PureComponent {
     text: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
     onCopy: PropTypes.func,
+    disabled: PropTypes.bool,
     options: PropTypes.shape({
       debug: PropTypes.bool,
       message: PropTypes.string,
@@ -18,7 +19,8 @@ export class CopyToClipboard extends React.PureComponent {
 
   static defaultProps = {
     onCopy: undefined,
-    options: undefined
+    options: undefined,
+    disabled: false
   };
 
 
@@ -51,10 +53,11 @@ export class CopyToClipboard extends React.PureComponent {
       onCopy: _onCopy,
       options: _options,
       children,
+      disabled,
       ...props
     } = this.props;
     const elem = React.Children.only(children);
 
-    return React.cloneElement(elem, {...props, onClick: this.onClick});
+    return React.cloneElement(elem, {...props, onClick: !disabled ? this.onClick : undefined});
   }
 }

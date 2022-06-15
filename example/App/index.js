@@ -56,6 +56,19 @@ export class App extends React.PureComponent {
         </section>
 
         <section className="section">
+          <h2>4. disabled</h2>
+          <CopyToClipboard
+            disabled
+            onCopy={this.onCopy}
+            options={{message: 'Whoa!'}}
+            text={value}>
+            <button type="button" onClick={onClick}>
+              Copy to clipboard with onClick prop
+            </button>
+          </CopyToClipboard>
+        </section>
+
+        <section className="section">
           {copied ? <span style={{color: 'red'}}>Copied.</span> : null}
         </section>
 
