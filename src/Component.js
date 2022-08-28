@@ -30,8 +30,6 @@ export class CopyToClipboard extends React.PureComponent {
       options
     } = this.props;
 
-    const elem = React.Children.only(children);
-
     const result = copy(text, options);
 
     if (onCopy) {
@@ -39,8 +37,8 @@ export class CopyToClipboard extends React.PureComponent {
     }
 
     // Bypass onClick if it was present
-    if (elem && elem.props && typeof elem.props.onClick === 'function') {
-      elem.props.onClick(event);
+    if (children.props && typeof children.props.onClick === 'function') {
+      children.props.onClick(event);
     }
   };
 
