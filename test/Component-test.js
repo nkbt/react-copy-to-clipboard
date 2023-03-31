@@ -129,5 +129,18 @@ describe('CopyToClipboard', () => {
     expect(buttonElement.style.display).toEqual('none');
     expect(buttonElement.nodeName.toLowerCase()).toEqual('button');
   });
+
+  it('should pass event in onCopy', () => {
+    let hasEvent = false;
+    const handleOnCopy = (_, __, event) => hasEvent = !!event
+    const button = TestUtils.renderIntoDocument((
+      <CopyToClipboard onCopy={handleOnCopy}>
+        <button>test event</button>
+      </CopyToClipboard>
+    ));
+    const buttonElement = React.findDOMNode(button);
+    TestUtils.Simulate.click(buttonElement);
+    expect(hasEvent).toEqual(true);
+  });
 });
- */
+*/

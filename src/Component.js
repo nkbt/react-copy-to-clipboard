@@ -35,7 +35,7 @@ export class CopyToClipboard extends React.PureComponent {
     const result = copy(text, options);
 
     if (onCopy) {
-      onCopy(text, result);
+      onCopy(text, result, event);
     }
 
     // Bypass onClick if it was present
