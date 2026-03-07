@@ -1,15 +1,46 @@
-version: 2
+version: 2.1
 
+parameters:
+  node-version:
+    type: string
+    default: "24.12.0"
+
+commands:
+  yarn-install:
+    steps:
+      - run: yarn -v
+
+      - run: date +"%Y-%m" > /tmp/month.txt && cat /tmp/month.txt
+      - restore_cache:
+          keys:
+            - &yarn_cache yarn-{{ .Environment.NODE_MODULES_VERSION }}-{{ checksum "/tmp/month.txt" }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Environment.NODE_MODULES_VERSION }}-{{ checksum "/tmp/month.txt" }}-
+
+      # yarn's state of installation
+      - restore_cache:
+          keys:
+            - &yarn_state_cache yarn-install-state-{{ .Environment.NODE_MODULES_VERSION }}-{{ checksum "/tmp/month.txt" }}-{{ checksum "yarn.lock" }}
+            - yarn-install-state-{{ .Environment.NODE_MODULES_VERSION }}-{{ checksum "/tmp/month.txt" }}-
+
+      - run: yarn install --immutable
+
+      - save_cache:
+          key: *yarn_cache
+          paths:
+            - 'node_modules'
+
+      - save_cache:
+          key: *yarn_state_cache
+          paths:
+            - '.yarn/install-state.gz'
 
 jobs:
-  ui:
-    working_directory: ~/app
+  test:
     docker:
-      - image: cimg/node:16.3.0-browsers
-
+      - image: "cimg/node:<< pipeline.parameters.node-version >>"
     steps:
       - checkout
-      - run: yarn install --immutable
+      - yarn-install
       - run: yarn check:deps
       - run: yarn lint
       - run: yarn test
@@ -22,4 +53,4 @@ workflows:
   version: 2
   dev:
     jobs:
-      - ui
+      - test
