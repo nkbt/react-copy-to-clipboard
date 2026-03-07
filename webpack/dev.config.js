@@ -1,43 +1,26 @@
-
-const {
-  mode,
-  pathTo,
-  plugins,
-  loaders,
-  resolve,
-  stats
-} = require('./common');
-
+const { mode, pathTo, plugins, loaders, resolve, stats } = require('./common');
 
 module.exports = {
   mode,
   devtool: 'eval',
 
-  entry: [
-    pathTo('example', 'index.js'),
-    'webpack-dev-server/client?http://localhost:8080'
-  ],
+  entry: [pathTo('example', 'index.js'), 'webpack-dev-server/client?http://localhost:8080'],
   output: {
     filename: 'bundle.js',
-    path: pathTo('dev')
+    path: pathTo('dev'),
   },
   optimization: {
     minimize: false,
     moduleIds: 'named',
-    chunkIds: 'named'
+    chunkIds: 'named',
   },
-  plugins: [
-    plugins.html
-  ],
+  plugins: [plugins.html],
   module: {
-    rules: [
-      loaders.babel,
-      loaders.css
-    ]
+    rules: [loaders.babel, loaders.css],
   },
   resolve,
   stats,
   devServer: {
-    historyApiFallback: true
-  }
+    historyApiFallback: true,
+  },
 };

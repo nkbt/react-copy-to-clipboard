@@ -1,0 +1,97 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!contracts/**/*",
+      "!package.json",
+      "!.yarnrc.yml",
+      "!yarn.lock",
+      "!.yarn",
+      "!node_modules",
+      "!**/dist"
+    ],
+    "ignoreUnknown": true
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedVariables": "error"
+      }
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "master"
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "arrowParentheses": "always",
+      "jsxQuoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "es5",
+      "quoteProperties": "asNeeded",
+      "bracketSpacing": true,
+      "bracketSameLine": false
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*/*.test.*"],
+      "javascript": {
+        "globals": ["it", "test", "describe", "beforeEach", "afterEach", "expect"]
+      }
+    },
+    {
+      "includes": ["./staking/cypress/**/*"],
+      "javascript": {
+        "globals": [
+          "cy",
+          "Cypress",
+          "it",
+          "describe",
+          "before",
+          "beforeEach",
+          "afterEach",
+          "expect"
+        ]
+      },
+      "linter": {
+        "rules": {
+          "suspicious": { "noAsyncPromiseExecutor": "off" }
+        }
+      }
+    },
+    {
+      "includes": ["./staking/ui/**/*.cy.tsx"],
+      "javascript": {
+        "globals": ["cy", "Cypress", "it", "describe", "beforeEach", "afterEach", "expect", "sinon"]
+      },
+      "linter": {
+        "rules": {
+          "suspicious": { "noAsyncPromiseExecutor": "off" },
+          "correctness": { "noUndeclaredVariables": "off" },
+          "a11y": {
+            "useSemanticElements": "off",
+            "useKeyWithClickEvents": "off"
+          }
+        }
+      }
+    }
+  ]
+}

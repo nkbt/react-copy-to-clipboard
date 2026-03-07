@@ -1,4 +1,3 @@
-
 const {
   mode,
   pathTo,
@@ -8,9 +7,8 @@ const {
   loaders,
   resolve,
   stats,
-  externals
+  externals,
 } = require('./common');
-
 
 module.exports = {
   mode,
@@ -20,23 +18,18 @@ module.exports = {
     filename: `${PACKAGE_NAME}.min.js`,
     path: pathTo('build'),
     library: COMPONENT_NAME,
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   optimization: {
     minimize: true,
     moduleIds: 'named',
-    chunkIds: 'named'
+    chunkIds: 'named',
   },
-  plugins: [
-    plugins.emptyPropTypes,
-    plugins.loaderOptions
-  ],
+  plugins: [plugins.emptyPropTypes, plugins.loaderOptions],
   module: {
-    rules: [
-      loaders.babelProd
-    ]
+    rules: [loaders.babelProd],
   },
   resolve,
   stats,
-  externals
+  externals,
 };

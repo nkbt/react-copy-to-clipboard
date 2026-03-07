@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import copy from 'copy-to-clipboard';
-
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export class CopyToClipboard extends React.PureComponent {
   static propTypes = {
@@ -11,24 +10,17 @@ export class CopyToClipboard extends React.PureComponent {
     options: PropTypes.shape({
       debug: PropTypes.bool,
       message: PropTypes.string,
-      format: PropTypes.string
-    })
+      format: PropTypes.string,
+    }),
   };
-
 
   static defaultProps = {
     onCopy: undefined,
-    options: undefined
+    options: undefined,
   };
 
-
-  onClick = event => {
-    const {
-      text,
-      onCopy,
-      children,
-      options
-    } = this.props;
+  onClick = (event) => {
+    const { text, onCopy, children, options } = this.props;
 
     const elem = React.Children.only(children);
 
@@ -39,22 +31,15 @@ export class CopyToClipboard extends React.PureComponent {
     }
 
     // Bypass onClick if it was present
-    if (elem && elem.props && typeof elem.props.onClick === 'function') {
+    if (elem?.props && typeof elem.props.onClick === 'function') {
       elem.props.onClick(event);
     }
   };
 
-
   render() {
-    const {
-      text: _text,
-      onCopy: _onCopy,
-      options: _options,
-      children,
-      ...props
-    } = this.props;
+    const { text: _text, onCopy: _onCopy, options: _options, children, ...props } = this.props;
     const elem = React.Children.only(children);
 
-    return React.cloneElement(elem, {...props, onClick: this.onClick});
+    return React.cloneElement(elem, { ...props, onClick: this.onClick });
   }
 }

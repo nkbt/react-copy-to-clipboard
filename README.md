@@ -25,7 +25,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 ### 1998 Script Tag:
 ```html
-<script src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-copy-to-clipboard/build/react-copy-to-clipboard.js"></script>
 (Module exposed as `CopyToClipboard`)
 ```

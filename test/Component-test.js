@@ -4,26 +4,29 @@ babel({
   babelrc: false,
   plugins: [
     require.resolve('@babel/plugin-proposal-object-rest-spread'),
-    require.resolve('@babel/plugin-proposal-class-properties')
+    require.resolve('@babel/plugin-proposal-class-properties'),
   ],
   presets: [
     require.resolve('@babel/preset-react'),
-    [require.resolve('@babel/preset-env'), {
-      targets: {
-        node: '10'
+    [
+      require.resolve('@babel/preset-env'),
+      {
+        targets: {
+          node: '10',
+        },
+        modules: 'commonjs',
+        loose: true,
       },
-      modules: 'commonjs',
-      loose: true
-    }]
+    ],
   ],
   retainLines: true,
-  comments: false
+  comments: false,
 });
 
 const test = require('tape');
-const {CopyToClipboard} = require('../src/Component');
+const { CopyToClipboard } = require('../src/Component');
 
-test('CopyToClipboard', t => {
+test('CopyToClipboard', (t) => {
   t.ok(CopyToClipboard instanceof Function, 'should be function');
   t.end();
 });

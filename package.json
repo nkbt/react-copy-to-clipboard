@@ -4,15 +4,7 @@
   "description": "Copy-to-clipboard React component",
   "main": "lib/index.js",
   "config": {
-    "component": "CopyToClipboard",
-    "externals": {
-      "react": "React",
-      "react-dom": "ReactDOM"
-    },
-    "include": [
-      "https://unpkg.com/react/umd/react.production.min.js",
-      "https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-    ]
+    "component": "CopyToClipboard"
   },
   "scripts": {
     "build": "yarn lib && yarn dist",
@@ -20,10 +12,11 @@
     "predist": "rm -rf ./build",
     "dist": "NODE_ENV=production webpack-cli --config ./webpack/dist.config.js && NODE_ENV=production webpack-cli --config ./webpack/min.config.js",
     "preghPages": "yarn pub",
-    "ghPages": "gh-pages --dist ./pub --repo git@github.com:nkbt/react-copy-to-clipboard.git --user nik@butenko.me --branch gh-pages --message 'Publish examples' ",
+    "ghPages": "gh-pages --dist ./pub --repo git@github.com:nkbt/react-copy-to-clipboard.git --user nik@butenko.me --branch gh-pages --message 'Publish examples'",
     "prelib": "rm -rf ./lib",
     "lib": "NODE_ENV=production babel src --out-dir lib",
-    "lint": "eslint .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --unsafe --write .",
     "prepub": "rm -rf ./pub",
     "pub": "NODE_ENV=production webpack-cli --config ./webpack/pub.config.js",
     "test": "node test/Component-test.js",
@@ -53,39 +46,33 @@
     "react": ">=15.3.0"
   },
   "dependencies": {
-    "copy-to-clipboard": "^3.3.1",
+    "copy-to-clipboard": "^3.3.3",
     "prop-types": "^15.8.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.9",
-    "@babel/eslint-parser": "^7.17.0",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "@babel/register": "^7.17.7",
-    "babel-loader": "^8.2.4",
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/register": "^7.28.6",
+    "@biomejs/biome": "^2.4.2",
+    "babel-loader": "^10.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "css-loader": "^6.7.1",
-    "depcheck": "^1.4.3",
-    "eslint": "^8.13.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
-    "gh-pages": "^3.2.3",
-    "html-webpack-plugin": "^5.5.0",
+    "css-loader": "^7.1.4",
+    "depcheck": "^1.4.7",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.6.6",
     "html-webpack-tags-plugin": "^3.0.2",
-    "mini-css-extract-plugin": "^2.6.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "style-loader": "^3.3.1",
-    "tape": "^5.5.3",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1"
+    "mini-css-extract-plugin": "^2.10.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "style-loader": "^4.0.0",
+    "tape": "^5.9.0",
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
   },
   "files": [
     "build",
@@ -95,5 +82,5 @@
     "package.json",
     "README.md"
   ],
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.12.0"
 }

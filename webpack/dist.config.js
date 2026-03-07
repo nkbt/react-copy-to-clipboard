@@ -7,9 +7,8 @@ const {
   resolve,
   stats,
   externals,
-  plugins
+  plugins,
 } = require('./common');
-
 
 module.exports = {
   mode,
@@ -19,22 +18,18 @@ module.exports = {
     filename: `${PACKAGE_NAME}.js`,
     path: pathTo('build'),
     library: COMPONENT_NAME,
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   optimization: {
     minimize: false,
     moduleIds: 'named',
-    chunkIds: 'named'
+    chunkIds: 'named',
   },
-  plugins: [
-    plugins.emptyPropTypes
-  ],
+  plugins: [plugins.emptyPropTypes],
   module: {
-    rules: [
-      loaders.babelProd
-    ]
+    rules: [loaders.babelProd],
   },
   resolve,
   stats,
-  externals
+  externals,
 };
